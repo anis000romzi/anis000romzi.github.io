@@ -1,5 +1,5 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 import { playwright } from '@vitest/browser-playwright';
 import tailwindcss from '@tailwindcss/vite';
 import adapter from '@sveltejs/adapter-auto';

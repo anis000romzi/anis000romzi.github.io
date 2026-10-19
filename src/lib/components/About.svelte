@@ -1,4 +1,6 @@
 <script lang="ts">
+	let { sectionIndex }: { sectionIndex: number } = $props();
+
 	import Icon from '@iconify/svelte';
 	import Reveal from './Reveal.svelte';
 	import profileImage from '$lib/assets/images/profile.jpeg';
@@ -34,7 +36,9 @@
 	class="section-x section-y section-gap flex w-full flex-col justify-center [box-shadow:0_0.3px_0_0_#737373] md:flex-row"
 >
 	<div class="flex flex-col">
-		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">00 — ABOUT</p>
+		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
+			{String(sectionIndex).padStart(2, '0')} — ABOUT
+		</p>
 		<img
 			src={profileImage}
 			alt="Anis Romzi"
@@ -44,16 +48,16 @@
 
 	<div class="flex w-full flex-col gap-10 md:max-w-xl lg:max-w-2xl">
 		<p class="text-lg text-[#EEEEEE] md:text-2xl">
-			I build software that earns trust through clarity. Eight years working across early-stage
-			startups and mid-size product teams — always at the intersection of engineering rigour and
-			design sensibility.
+			I build software that earns trust through clarity. Two years working across insurance,
+			ticketing SaaS, and enterprise systems — always at the intersection of backend reliability and
+			considered front-end design.
 		</p>
 		<Reveal delay={150}>
 			<p class="text-base text-[#737373] md:text-lg">
-				Previously at Figma (infrastructure), Linear (API platform), and two companies I co-founded.
-				I care deeply about developer experience, performance, and systems that degrade gracefully.
-				When I'm not writing code I'm usually reading architecture theory or hiking somewhere
-				remote.
+				Currently at bitcorp, maintaining BBoss and building BRISurf Care for insurance claims and
+				refunds. Previously shipped TixFly, a ticketing SaaS platform, and supported MariPos at Mari
+				Works Solution, and built internal tools at PT Nusantara Infrastructure. I care about clean
+				APIs, resolving bugs fast, and features that hold up in production.
 			</p>
 		</Reveal>
 		<Reveal delay={300}>

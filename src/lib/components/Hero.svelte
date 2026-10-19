@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import Icon from '@iconify/svelte';
 	import Reveal from './Reveal.svelte';
+	import resume from '$lib/assets/resume_muhammad_anis_romzi.pdf';
 </script>
 
 <div
@@ -18,8 +18,8 @@
 	<div class="flex flex-col items-center justify-between gap-10 md:flex-row md:items-end">
 		<Reveal delay={300} class="md:w-6/12">
 			<p class="text-base text-[#737373] md:text-lg">
-				Software engineer and product designer building precise, considered digital work. Currently
-				focused on developer tooling and spatial interfaces.
+				Full stack developer with 2 years' experience delivering scalable, user-focused web
+				applications. Currently optimizing backend performance and APIs at bitcorp, Jakarta.
 			</p>
 		</Reveal>
 
@@ -47,10 +47,16 @@
 				</a>
 			</li>
 			<li class="hover:text-[#CC2A2A]">
-				<a href={resolve('/')} class="flex items-center justify-center gap-[8px] p-2">
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
+				<a
+					href={resume}
+					download="Anis Romzi - Resume.pdf"
+					class="flex items-center justify-center gap-2 p-2"
+				>
 					<Icon icon="carbon:document" width="15" height="15" />
 					<span>Résumé</span>
 				</a>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->
 			</li>
 		</ul>
 	</div>

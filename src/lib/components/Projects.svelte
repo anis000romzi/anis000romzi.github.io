@@ -1,4 +1,6 @@
 <script lang="ts">
+	let { sectionIndex }: { sectionIndex: number } = $props();
+
 	import { resolve } from '$app/paths';
 	import Reveal from './Reveal.svelte';
 
@@ -43,11 +45,11 @@
 
 <div
 	id="projects"
-	class="section-x section-y flex flex-col gap-16 md:gap-20 [box-shadow:0_0.3px_0_0_#737373]"
+	class="section-x section-y flex flex-col gap-16 [box-shadow:0_0.3px_0_0_#737373] md:gap-20"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
 		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
-			01 — PROJECTS
+			{String(sectionIndex).padStart(2, '0')} — PROJECTS
 		</p>
 
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">

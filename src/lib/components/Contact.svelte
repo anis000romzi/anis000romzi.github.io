@@ -1,4 +1,6 @@
 <script lang="ts">
+	let { sectionIndex }: { sectionIndex: number } = $props();
+
 	import Button from './ui/button/button.svelte';
 	import Input from './ui/input/input.svelte';
 	import Label from './ui/label/label.svelte';
@@ -9,7 +11,9 @@
 	id="contact"
 	class="section-x section-y section-gap flex w-full flex-col justify-center [box-shadow:0_0.3px_0_0_#737373] md:flex-row"
 >
-	<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">03 — CONTACT</p>
+	<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
+		{String(sectionIndex).padStart(2, '0')} — CONTACT
+	</p>
 
 	<div class="flex w-full flex-col gap-10 md:max-w-xl lg:max-w-2xl">
 		<p class="text-lg text-[#EEEEEE] md:text-xl">
