@@ -26,6 +26,10 @@
 	<Contact sectionIndex={index} />
 {/snippet}
 
+<svelte:head>
+	<title>Portofolio — Anis Romzi</title>
+</svelte:head>
+
 <div>
 	<Reveal>
 		<Hero />

@@ -1,102 +1,107 @@
 <script lang="ts">
-	let { sectionIndex }: { sectionIndex: number } = $props();
-
-	import { resolve } from '$app/paths';
 	import Reveal from './Reveal.svelte';
 
-	const projects = [
+	let { sectionIndex }: { sectionIndex: number } = $props();
+
+	// Professional experience from the résumé in src/lib/assets.
+	const experiences = [
 		{
-			title: 'Project testing 1',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-			skills: ['Rust', 'C++', 'JavaScript'],
-			year: 2077
+			company: 'bitcorp. (PT. Bringin Inti Teknologi)',
+			role: 'Backend Developer',
+			period: 'Jan 2026 — Present',
+			location: 'South Jakarta, Indonesia',
+			note: 'Outsourced to PT BRIngin Sejahtera Makmur Pialang Asuransi.',
+			highlights: [
+				'Maintain and enhance BBoss, resolving bugs and improving application stability and performance.',
+				'Designed, developed, and deployed BRISurf Care for insurance claim and refund registration.',
+				'Deliver feature adjustments and application maintenance based on client requests and business needs.'
+			],
+			products: ['BBoss', 'BRISurf Care']
 		},
 		{
-			title: 'Project testing 2',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-			skills: ['Haskell', 'Go', 'Ruby'],
-			year: 2078
+			company: 'Mari Works Solution',
+			role: 'Full Stack Developer',
+			period: 'Sep 2024 — Jan 2026',
+			location: 'South Jakarta, Indonesia',
+			note: 'Internship & Contract',
+			highlights: [
+				'Improved TixFly’s backend API reliability, security, and performance, and resolved admin dashboard bugs.',
+				'Built modules for digital video transactions and event bookings, implemented password recovery, and customized email and ticket workflows.',
+				'Supported MariPos with backend fixes for seat availability, transactions, and promo codes, and maintained APIs for the mobile team.'
+			],
+			products: ['TixFly', 'MariPos']
 		},
 		{
-			title: 'Project testing 3',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-			skills: ['Haskell', 'Go', 'Ruby'],
-			year: 2078
-		},
-		{
-			title: 'Project testing 4',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-			skills: ['Haskell', 'Go', 'Ruby'],
-			year: 2078
-		},
-		{
-			title: 'Project testing 5',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-			skills: ['Haskell', 'Go', 'Ruby'],
-			year: 2078
+			company: 'PT Nusantara Infrastructure',
+			role: 'Full Stack Developer Intern',
+			period: 'Aug 2023 — Dec 2023',
+			location: 'South Jakarta, Indonesia',
+			note: '',
+			highlights: [
+				'Developed features for NISA, an internal self-assessment application.',
+				'Refactored the codebase for readability and maintainability, and built a repair flow API aligned with operational procedures.',
+				'Resolved bugs and improved the application’s user experience.'
+			],
+			products: ['NISA']
 		}
 	];
 </script>
 
-<div
+<section
 	id="experience"
+	aria-labelledby="experience-heading"
 	class="section-x section-y flex flex-col gap-16 border-b border-[#737373]/40 md:gap-20"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
-		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
+		<h2
+			id="experience-heading"
+			class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm"
+		>
 			{String(sectionIndex).padStart(2, '0')} — EXPERIENCE
-		</p>
-
+		</h2>
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">
 			<p class="text-lg text-[#737373]">
-				A selection of projects shipped in the last two years. Full case studies available on
-				request.
+				My work across insurance, ticketing SaaS, and enterprise systems — building features,
+				maintaining APIs, and improving the software people use every day.
 			</p>
 		</div>
 	</div>
 
-	<div class="mb-10 w-full">
-		{#each projects as project, i (project.title)}
-			<div class="border-t border-[#737373]/40 last:border-b">
+	<ol class="w-full">
+		{#each experiences as experience (experience.company)}
+			<li class="border-t border-[#737373]/40 last:border-b">
 				<Reveal>
-					<a href={resolve('/')}>
-						<div
-							class="group flex flex-col gap-4 p-5 transition-colors duration-200 hover:bg-[#CC2A2A]/5 sm:p-7 md:flex-row md:items-center md:justify-between md:gap-8 lg:gap-16"
-						>
-							<div class="flex items-center justify-between md:hidden">
-								<span class="font-mono text-sm text-[#363535]"
-									>{String(i + 1).padStart(2, '0')}</span
-								>
-								<span class="font-mono text-xs text-[#737373]">{project.year}</span>
-							</div>
-							<span class="hidden font-mono text-sm text-[#363535] md:block"
-								>{String(i + 1).padStart(2, '0')}</span
-							>
-							<div class="flex w-full flex-col gap-3 md:w-6/12 md:gap-4">
-								<p class="text-xl transition-colors duration-200 group-hover:text-[#CC2A2A]">
-									{project.title}
-								</p>
-								<p class="line-clamp-3 text-sm text-[#737373]">
-									{project.description}
-								</p>
-							</div>
-							<div class="flex flex-wrap gap-2">
-								{#each project.skills as skill (skill)}
-									<div class="border border-[#737373]/40 p-1 px-3 font-mono text-xs text-[#737373]">
-										<span>{skill}</span>
-									</div>
-								{/each}
-							</div>
-							<span class="hidden font-mono text-xs text-[#737373] md:block">{project.year}</span>
+					<article
+						class="grid gap-6 py-8 sm:py-10 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10 lg:gap-16"
+					>
+						<div class="flex flex-col gap-3 font-mono text-xs text-[#737373]">
+							<p class="text-[#EEEEEE]">{experience.period}</p>
+							<p>{experience.location}</p>
 						</div>
-					</a>
+						<div class="flex min-w-0 flex-col gap-5">
+							<div class="flex flex-col gap-2">
+								<h3 class="text-xl font-medium sm:text-2xl">{experience.role}</h3>
+								<p class="text-[#CC2A2A]">{experience.company}</p>
+								{#if experience.note}<p class="text-sm text-[#737373]">{experience.note}</p>{/if}
+							</div>
+							<ul
+								class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-[#737373] marker:text-[#CC2A2A] sm:text-base"
+							>
+								{#each experience.highlights as highlight (highlight)}
+									<li>{highlight}</li>
+								{/each}
+							</ul>
+							<ul aria-label="Products worked on" class="flex flex-wrap gap-2">
+								{#each experience.products as product (product)}
+									<li class="border border-[#737373]/40 px-3 py-1 font-mono text-xs text-[#737373]">
+										{product}
+									</li>
+								{/each}
+							</ul>
+						</div>
+					</article>
 				</Reveal>
-			</div>
+			</li>
 		{/each}
-	</div>
-</div>
+	</ol>
+</section>
