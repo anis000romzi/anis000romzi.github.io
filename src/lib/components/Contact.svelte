@@ -9,7 +9,7 @@
 
 <div
 	id="contact"
-	class="section-x section-y section-gap flex w-full flex-col justify-center [box-shadow:0_0.3px_0_0_#737373] md:flex-row"
+	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#737373]/40 md:flex-row"
 >
 	<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
 		{String(sectionIndex).padStart(2, '0')} — CONTACT

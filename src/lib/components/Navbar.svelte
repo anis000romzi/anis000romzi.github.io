@@ -29,10 +29,12 @@
 
 <nav
 	bind:this={navEl}
-	class="section-x sticky top-0 z-50 bg-[#080808]/50 py-5 font-mono text-[#EEEEEE] [box-shadow:0_0.3px_0_0_#737373] backdrop-blur-md md:py-6"
+	class="section-x sticky top-0 z-50 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono text-[#EEEEEE] backdrop-blur-md md:py-6"
 >
 	<div class="flex items-center justify-between">
-		<a href={resolve('/')}><span class="font-bold">anis00<span class="text-[#CC2A2A]">0romzi.</span></span></a>
+		<a href={resolve('/')}
+			><span class="font-bold">anis00<span class="text-[#CC2A2A]">0romzi.</span></span></a
+		>
 
 		<ul class="hidden list-none gap-10 text-xs font-light tracking-widest text-[#737373] md:flex">
 			{#each links as link (link.id)}
@@ -74,7 +76,7 @@
 	></button>
 
 	<ul
-		class="section-x font-mono fixed inset-x-0 z-50 flex list-none flex-col gap-5 bg-[#080808]/50 py-5 font-light text-[#737373] [box-shadow:0_0.3px_0_0_#737373] backdrop-blur-md md:hidden"
+		class="section-x fixed inset-x-0 z-50 flex list-none flex-col gap-5 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono font-light text-[#737373] backdrop-blur-md md:hidden"
 		style="top: {navHeight}px"
 	>
 		{#each links as link (link.id)}

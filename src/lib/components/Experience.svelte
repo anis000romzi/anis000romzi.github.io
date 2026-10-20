@@ -45,7 +45,7 @@
 
 <div
 	id="experience"
-	class="section-x section-y flex flex-col gap-16 [box-shadow:0_0.3px_0_0_#737373] md:gap-20"
+	class="section-x section-y flex flex-col gap-16 border-b border-[#737373]/40 md:gap-20"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
 		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
@@ -62,9 +62,7 @@
 
 	<div class="mb-10 w-full">
 		{#each projects as project, i (project.title)}
-			<div
-				class="[box-shadow:0_-0.3px_0_0_#737373] last:[box-shadow:0_-0.3px_0_0_#737373,0_0.3px_0_0_#737373]"
-			>
+			<div class="border-t border-[#737373]/40 last:border-b">
 				<Reveal>
 					<a href={resolve('/')}>
 						<div
@@ -89,9 +87,7 @@
 							</div>
 							<div class="flex flex-wrap gap-2">
 								{#each project.skills as skill (skill)}
-									<div
-										class="p-1 px-3 font-mono text-xs text-[#737373] [box-shadow:0_0_0_0.3px_#737373]"
-									>
+									<div class="border border-[#737373]/40 p-1 px-3 font-mono text-xs text-[#737373]">
 										<span>{skill}</span>
 									</div>
 								{/each}

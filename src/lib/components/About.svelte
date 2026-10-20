@@ -33,7 +33,7 @@
 
 <div
 	id="about"
-	class="section-x section-y section-gap flex w-full flex-col justify-center [box-shadow:0_0.3px_0_0_#737373] md:flex-row"
+	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#737373]/40 md:flex-row"
 >
 	<div class="flex flex-col">
 		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
@@ -66,7 +66,7 @@
 				<div class="flex flex-wrap gap-2 font-mono text-xs text-[#737373]">
 					{#each skills as skill (skill.name)}
 						<div
-							class="flex items-center justify-center gap-2 p-2 [box-shadow:0_0_0_0.3px_#737373] hover:text-[#CC2A2A] hover:[box-shadow:0_0_0_0.3px_#CC2A2A]"
+							class="flex items-center justify-center gap-2 border border-[#737373]/40 p-2 hover:border-[#CC2A2A]/40 hover:text-[#CC2A2A]"
 						>
 							<Icon icon={skill.icon} width="13" height="13" />
 							<span>{skill.name}</span>

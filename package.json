@@ -27,6 +27,7 @@
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.3.0",
+		"@types/markdown-it": "^14.2.0",
 		"@types/node": "^22",
 		"@vitest/browser-playwright": "^4.1.8",
 		"bits-ui": "^2.18.1",
@@ -53,6 +54,7 @@
 		"vitest-browser-svelte": "^2.1.1"
 	},
 	"dependencies": {
-		"@iconify/svelte": "^5.2.2"
+		"@iconify/svelte": "^5.2.2",
+		"markdown-it": "^15.0.3"
 	}
 }

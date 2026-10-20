@@ -4,9 +4,7 @@
 	import resume from '$lib/assets/resume_muhammad_anis_romzi.pdf';
 </script>
 
-<div
-	class="section-x section-y flex h-screen flex-col justify-center [box-shadow:0_0.3px_0_0_#737373]"
->
+<div class="section-x section-y flex h-screen flex-col justify-center border-b border-[#737373]/40">
 	<Reveal delay={0}>
 		<p class="font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">— FULLSTACK DEVELOPER</p>
 	</Reveal>
