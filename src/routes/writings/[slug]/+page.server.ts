@@ -3,7 +3,8 @@ import MarkdownIt from 'markdown-it';
 import { writings } from '$lib/content/writings/writings';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
-const markdown = new MarkdownIt({ html: false });
+// Writings are trusted, repository-authored content; preserve embedded HTML.
+const markdown = new MarkdownIt({ html: true });
 
 export const entries: EntryGenerator = () => writings.map(({ slug }) => ({ slug }));
 

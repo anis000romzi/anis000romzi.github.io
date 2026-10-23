@@ -37,10 +37,22 @@
 			{#if data.writing.excerpt}<p class="text-lg text-[#737373]">{data.writing.excerpt}</p>{/if}
 		</header>
 		<div
-			class="prose max-w-none break-words prose-invert prose-a:text-[#CC2A2A] prose-pre:overflow-x-auto prose-img:h-auto"
+			class="writing-body prose max-w-none break-words prose-invert prose-a:text-[#CC2A2A] prose-pre:overflow-x-auto prose-img:h-auto prose-img:max-w-full"
 		>
 			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 			{@html data.html}
 		</div>
 	</article>
 </main>
+
+<style>
+	.writing-body :global(video) {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.writing-body :global(iframe),
+	.writing-body :global(audio) {
+		max-width: 100%;
+	}
+</style>
