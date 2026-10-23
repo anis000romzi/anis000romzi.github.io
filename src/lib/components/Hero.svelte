@@ -4,7 +4,9 @@
 	import resume from '$lib/assets/resume_muhammad_anis_romzi.pdf';
 </script>
 
-<div class="section-x section-y flex h-screen flex-col justify-center border-b border-[#737373]/40">
+<div
+	class="section-x section-y flex min-h-svh flex-col justify-center border-b border-[#737373]/40"
+>
 	<Reveal delay={0}>
 		<p class="font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">— FULLSTACK DEVELOPER</p>
 	</Reveal>
@@ -13,8 +15,8 @@
 			Anis <br /> <span class="text-[#CC2A2A]">Romzi.</span>
 		</h1>
 	</Reveal>
-	<div class="flex flex-col items-center justify-between gap-10 md:flex-row md:items-end">
-		<Reveal delay={300} class="md:w-6/12">
+	<div class="flex flex-col items-center justify-between gap-10 xl:flex-row xl:items-end">
+		<Reveal delay={300} class="xl:w-6/12">
 			<p class="text-base text-[#737373] md:text-lg">
 				Full stack developer with 2 years' experience delivering scalable, user-focused web
 				applications. Currently optimizing backend performance and APIs at bitcorp, Jakarta.
@@ -22,7 +24,7 @@
 		</Reveal>
 
 		<ul
-			class="flex w-full list-none flex-wrap items-start gap-2 font-mono text-xs font-light tracking-widest text-[#737373] uppercase md:w-auto md:items-center lg:gap-10"
+			class="flex w-full list-none flex-wrap items-start gap-2 font-mono text-xs font-light tracking-widest text-white uppercase md:w-auto md:items-center lg:gap-4"
 		>
 			<li class="hover:text-[#CC2A2A]">
 				<a

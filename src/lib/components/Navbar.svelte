@@ -36,7 +36,7 @@
 			><span class="font-bold">anis00<span class="text-[#CC2A2A]">0romzi.</span></span></a
 		>
 
-		<ul class="hidden list-none gap-10 text-xs font-light tracking-widest text-[#737373] md:flex">
+		<ul class="hidden list-none gap-10 text-xs font-light tracking-widest text-[#737373] xl:flex">
 			{#each links as link (link.id)}
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 				<li class="hover:text-[#CC2A2A]"><a href={link.href}>{link.label}</a></li>
@@ -44,7 +44,7 @@
 		</ul>
 
 		<button
-			class="flex flex-col gap-1.5 md:hidden"
+			class="flex flex-col gap-1.5 xl:hidden"
 			aria-label="Toggle menu"
 			aria-expanded={mobileMenuOpen}
 			onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
@@ -70,13 +70,13 @@
 
 {#if mobileMenuOpen}
 	<button
-		class="fixed inset-0 z-40 cursor-default bg-transparent md:hidden"
+		class="fixed inset-0 z-40 cursor-default bg-transparent xl:hidden"
 		aria-label="Close menu"
 		onclick={closeMenu}
 	></button>
 
 	<ul
-		class="section-x fixed inset-x-0 z-50 flex list-none flex-col gap-5 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono font-light text-[#737373] backdrop-blur-md md:hidden"
+		class="section-x fixed inset-x-0 z-50 flex list-none flex-col gap-5 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono font-light text-[#737373] backdrop-blur-md xl:hidden"
 		style="top: {navHeight}px"
 	>
 		{#each links as link (link.id)}

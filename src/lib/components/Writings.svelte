@@ -34,7 +34,7 @@
 				Occasional essays on software craft, systems thinking, and life adjacent to screens.
 			</p>
 
-			<div class="flex gap-3">
+			<div class="flex flex-wrap gap-3">
 				{#each categories as category (category)}
 					<button
 						type="button"
@@ -73,7 +73,7 @@
 								<p class="text-[#737373]">{writing.excerpt}</p>
 							{/if}
 						</div>
-						<div class="flex justify-between font-mono text-sm">
+						<div class="flex flex-wrap justify-between gap-3 font-mono text-sm">
 							<time datetime={writing.date}>{formatDate(writing.date)}</time>
 							<div class="flex items-center justify-center gap-2 text-[#CC2A2A]">
 								<span>Read</span>
