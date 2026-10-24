@@ -27,7 +27,7 @@
 {/snippet}
 
 <svelte:head>
-	<title>Portofolio — Anis Romzi</title>
+	<title>Personal Portfolio — Anis Romzi</title>
 </svelte:head>
 
 <div>
