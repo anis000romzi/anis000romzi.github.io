@@ -44,7 +44,7 @@
 		</ul>
 
 		<button
-			class="flex flex-col gap-1.5 xl:hidden"
+			class="flex size-11 flex-col items-center justify-center gap-1.5 xl:hidden"
 			aria-label="Toggle menu"
 			aria-expanded={mobileMenuOpen}
 			onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
@@ -70,6 +70,7 @@
 
 {#if mobileMenuOpen}
 	<button
+		data-press-feedback="none"
 		class="fixed inset-0 z-40 cursor-default bg-transparent xl:hidden"
 		aria-label="Close menu"
 		onclick={closeMenu}
@@ -82,7 +83,9 @@
 		{#each links as link (link.id)}
 			<li class="hover:text-[#CC2A2A]">
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-				<a href={link.href} onclick={closeMenu}>{link.label}</a>
+				<a class="flex min-h-11 items-center px-3" href={link.href} onclick={closeMenu}
+					>{link.label}</a
+				>
 			</li>
 		{/each}
 	</ul>

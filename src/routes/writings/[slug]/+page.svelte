@@ -23,7 +23,9 @@
 
 <main class="section-x section-y min-h-[70vh]">
 	<article class="mx-auto max-w-3xl">
-		<a href={resolve('/#writings')} class="font-mono text-sm text-[#737373] hover:text-[#CC2A2A]"
+		<a
+			href={resolve('/#writings')}
+			class="inline-flex items-center font-mono text-sm text-[#737373] hover:text-[#CC2A2A]"
 			>← Back to writings</a
 		>
 		<header class="mt-10 mb-10 flex flex-col gap-6 border-b border-[#737373]/40 pb-10">

@@ -70,6 +70,63 @@ body {
 	line-height: 1.65;
 }
 
+/* Shared feedback for links and buttons, including shadcn controls. */
+:where(a[href], button):not(:disabled, [aria-disabled='true'], [data-press-feedback='none']) {
+	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: rgb(204 42 42 / 20%);
+	transition-property: color, background-color, border-color, box-shadow, scale, filter;
+	transition-duration: 160ms;
+	transition-timing-function: ease-out;
+}
+
+/* Card links need a box so the whole card responds to a press. */
+a:has(> div) {
+	display: block;
+}
+
+:is(a[href], button):not(:disabled, [aria-disabled='true'], [data-press-feedback='none']):is(
+		:active,
+		[data-pressed]
+	) {
+	scale: 0.97;
+	filter: brightness(1.2);
+	box-shadow: inset 0 0 0 100vmax rgb(204 42 42 / 16%);
+	transition-duration: 0ms;
+}
+
+:is(a[href], button):focus-visible {
+	outline: 2px solid #cc2a2a;
+	outline-offset: 4px;
+}
+
+@media (pointer: coarse) {
+	:where(a[href], button):not(.writing-body a, [data-press-feedback='none']) {
+		min-height: 44px;
+		min-width: 44px;
+	}
+
+	/* Plain text links outside prose also get a full-height touch target. */
+	a[href]:not([class], .writing-body a) {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	a[href]:has(> div) {
+		display: block;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:is(a[href], button):not([data-press-feedback='none']) {
+		transition: none;
+	}
+
+	:is(a[href], button):is(:active, [data-pressed]) {
+		scale: none;
+	}
+}
+
 :root {
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.145 0 0);
