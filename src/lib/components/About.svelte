@@ -6,28 +6,47 @@
 	import profileImage from '$lib/assets/images/profile.jpeg';
 
 	// https://icon-sets.iconify.design
-	const skills: { name: string; icon: string }[] = [
-		{ name: 'Node.js', icon: 'devicon:nodejs' },
-		{ name: 'PHP', icon: 'material-icon-theme:php-elephant-pink' },
-		{ name: 'Express.js', icon: 'skill-icons:expressjs-light' },
-		{ name: 'NestJS', icon: 'devicon:nestjs' },
-		{ name: 'Laravel', icon: 'devicon:laravel' },
-		{ name: 'Codeigniter', icon: 'logos:codeigniter-icon' },
-		{ name: 'MySQL', icon: 'devicon:mysql' },
-		{ name: 'PostgreSQL', icon: 'devicon:postgresql' },
-		{ name: 'MongoDB', icon: 'devicon:mongodb' },
-		{ name: 'Redis', icon: 'devicon:redis' },
-		{ name: 'HTML', icon: 'vscode-icons:file-type-html' },
-		{ name: 'CSS', icon: 'skill-icons:css' },
-		{ name: 'JavaScript', icon: 'devicon:javascript' },
-		{ name: 'TypeScript', icon: 'devicon:typescript' },
-		{ name: 'React.js', icon: 'devicon:react' },
-		{ name: 'Vue.js', icon: 'devicon:vuejs' },
-		{ name: 'Next.js', icon: 'devicon:nextjs' },
-		{ name: 'Nuxt.js', icon: 'devicon:nuxt' },
-		{ name: 'Tailwind CSS', icon: 'devicon:tailwindcss' },
-		{ name: 'Git', icon: 'devicon:git' },
-		{ name: 'Docker', icon: 'devicon:docker' }
+	const skills: { categories: string; items: { name: string; icon: string }[] }[] = [
+		{
+			categories: 'Backend Development',
+			items: [
+				{ name: 'Node.js', icon: 'devicon:nodejs' },
+				{ name: 'PHP', icon: 'material-icon-theme:php-elephant-pink' },
+				{ name: 'NestJS', icon: 'devicon:nestjs' },
+				{ name: 'Laravel', icon: 'devicon:laravel' },
+				{ name: 'Codeigniter', icon: 'logos:codeigniter-icon' },
+
+			]
+		},
+		{
+			categories: 'Frontend Development',
+			items: [
+				{ name: 'TypeScript', icon: 'devicon:typescript' },
+				{ name: 'HTML', icon: 'vscode-icons:file-type-html' },
+				{ name: 'CSS', icon: 'skill-icons:css' },
+				{ name: 'React.js', icon: 'devicon:react' },
+				{ name: 'Vue.js', icon: 'devicon:vuejs' },
+				{ name: 'Svelte.js', icon: 'devicon:svelte' },
+				{ name: 'Tailwind CSS', icon: 'devicon:tailwindcss' }
+			]
+		},
+		{
+			categories: 'Databases',
+			items: [
+				{ name: 'MySQL', icon: 'devicon:mysql' },
+				{ name: 'PostgreSQL', icon: 'devicon:postgresql' },
+				{ name: 'MongoDB', icon: 'devicon:mongodb' }
+			]
+		},
+		{
+			categories: 'Tools',
+			items: [
+				{ name: 'Git', icon: 'devicon:git' },
+				{ name: 'Docker', icon: 'devicon:docker' },
+				{ name: 'Linux', icon: 'devicon:linux' },
+				{ name: 'Nginx', icon: 'devicon:nginx' },
+			]
+		}
 	];
 </script>
 
@@ -63,16 +82,25 @@
 		<Reveal delay={300}>
 			<div class="flex flex-col gap-5">
 				<p class="font-mono text-sm tracking-widest text-[#CC2A2A]">SKILLS</p>
-				<div class="flex flex-wrap gap-2 font-mono text-xs text-[#737373]">
-					{#each skills as skill (skill.name)}
-						<div
-							class="flex items-center justify-center gap-2 border border-[#737373]/40 p-2 hover:border-[#CC2A2A]/40 hover:text-[#CC2A2A]"
-						>
-							<Icon icon={skill.icon} width="13" height="13" />
-							<span>{skill.name}</span>
+
+				{#each skills as skill (skill.categories)}
+					<div class="flex flex-col gap-3">
+						<p class="font-mono text-sm text-[#EEEEEE]">
+							{skill.categories}
+						</p>
+
+						<div class="flex flex-wrap gap-2 font-mono text-xs text-[#737373]">
+							{#each skill.items as item (item.name)}
+								<div
+									class="flex items-center justify-center gap-2 border border-[#737373]/40 p-2 hover:border-[#CC2A2A]/40 hover:text-[#CC2A2A]"
+								>
+									<Icon icon={item.icon} width="13" height="13" />
+									<span>{item.name}</span>
+								</div>
+							{/each}
 						</div>
-					{/each}
-				</div>
+					</div>
+				{/each}
 			</div>
 		</Reveal>
 	</div>
