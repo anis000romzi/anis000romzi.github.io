@@ -22,15 +22,15 @@
 
 <div
 	id="writings"
-	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#737373]/40"
+	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#929292]/40"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
-		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
+		<p class="shrink-0 font-mono text-xs tracking-widest text-[#F71111] md:text-sm">
 			{String(sectionIndex).padStart(2, '0')} — WRITINGS
 		</p>
 
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">
-			<p class="text-lg text-[#737373]">
+			<p class="text-lg text-[#929292]">
 				Occasional essays on software craft, systems thinking, and life adjacent to screens.
 			</p>
 
@@ -40,8 +40,8 @@
 						type="button"
 						aria-pressed={selected === category}
 						onclick={() => toggle(category)}
-						class="cursor-pointer border border-[#737373]/40 p-1 px-3 font-mono text-sm hover:border-[#CC2A2A] hover:text-[#CC2A2A]
-							{selected === category ? 'bg-[#CC2A2A] text-white hover:text-white' : 'text-[#737373]'}"
+						class="cursor-pointer border border-[#929292]/40 p-1 px-3 font-mono text-sm hover:border-[#F71111] hover:text-[#F71111]
+							{selected === category ? 'bg-[#F71111] text-white hover:text-white' : 'text-[#929292]'}"
 					>
 						{category}
 					</button>
@@ -56,12 +56,12 @@
 			<Reveal>
 				<a href={resolve('/writings/[slug]', { slug: writing.slug })}>
 					<div
-						class="flex min-w-0 flex-col gap-6 border border-[#737373]/40 p-6 hover:bg-[#737373]/40"
+						class="flex min-w-0 flex-col gap-6 border border-[#929292]/40 p-6 hover:bg-[#929292]/40"
 					>
 						<div
-							class="flex flex-wrap items-baseline justify-between gap-4 font-mono text-xs text-[#737373]"
+							class="flex flex-wrap items-baseline justify-between gap-4 font-mono text-xs text-[#929292]"
 						>
-							<div class="border border-[#737373] p-1 px-3 font-mono text-sm text-[#737373]">
+							<div class="border border-[#929292] p-1 px-3 font-mono text-sm text-[#929292]">
 								<span>{writing.category}</span>
 							</div>
 						</div>
@@ -70,12 +70,12 @@
 								{writing.title}
 							</p>
 							{#if writing.excerpt}
-								<p class="text-[#737373]">{writing.excerpt}</p>
+								<p class="text-[#929292]">{writing.excerpt}</p>
 							{/if}
 						</div>
 						<div class="flex flex-wrap justify-between gap-3 font-mono text-sm">
 							<time datetime={writing.date}>{formatDate(writing.date)}</time>
-							<div class="flex items-center justify-center gap-2 text-[#CC2A2A]">
+							<div class="flex items-center justify-center gap-2 text-[#F71111]">
 								<span>Read</span>
 								<Icon icon="akar-icons:arrow-right" width="13" height="13" />
 							</div>
@@ -84,7 +84,7 @@
 				</a>
 			</Reveal>
 		{:else}
-			<div class="col-span-full text-[#737373]">No writings in this category yet.</div>
+			<div class="col-span-full text-[#929292]">No writings in this category yet.</div>
 		{/each}
 	</div>
 </div>

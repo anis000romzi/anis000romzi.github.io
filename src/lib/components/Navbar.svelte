@@ -29,17 +29,17 @@
 
 <nav
 	bind:this={navEl}
-	class="section-x sticky top-0 z-50 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono text-[#EEEEEE] backdrop-blur-md md:py-6"
+	class="section-x sticky top-0 z-50 border-b border-[#929292]/40 bg-[#080808]/50 py-5 font-mono text-[#EEEEEE] backdrop-blur-md md:py-6"
 >
 	<div class="flex items-center justify-between">
 		<a href={resolve('/')}
-			><span class="font-bold">anis00<span class="text-[#CC2A2A]">0romzi.</span></span></a
+			><span class="font-bold">anis00<span class="text-[#F71111]">0romzi.</span></span></a
 		>
 
-		<ul class="hidden list-none gap-10 text-xs font-light tracking-widest text-[#737373] xl:flex">
+		<ul class="hidden list-none gap-10 text-xs font-light tracking-widest text-[#929292] xl:flex">
 			{#each links as link (link.id)}
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-				<li class="hover:text-[#CC2A2A]"><a href={link.href}>{link.label}</a></li>
+				<li class="hover:text-[#F71111]"><a href={link.href}>{link.label}</a></li>
 			{/each}
 		</ul>
 
@@ -77,11 +77,11 @@
 	></button>
 
 	<ul
-		class="section-x fixed inset-x-0 z-50 flex list-none flex-col gap-5 border-b border-[#737373]/40 bg-[#080808]/50 py-5 font-mono font-light text-[#737373] backdrop-blur-md xl:hidden"
+		class="section-x fixed inset-x-0 z-50 flex list-none flex-col gap-5 border-b border-[#929292]/40 bg-[#080808]/50 py-5 font-mono font-light text-[#929292] backdrop-blur-md xl:hidden"
 		style="top: {navHeight}px"
 	>
 		{#each links as link (link.id)}
-			<li class="hover:text-[#CC2A2A]">
+			<li class="hover:text-[#F71111]">
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 				<a class="flex min-h-11 items-center px-3" href={link.href} onclick={closeMenu}
 					>{link.label}</a

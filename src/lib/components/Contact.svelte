@@ -8,11 +8,11 @@
 <section
 	id="contact"
 	aria-labelledby="contact-heading"
-	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#737373]/40 md:flex-row"
+	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#929292]/40 md:flex-row"
 >
 	<h2
 		id="contact-heading"
-		class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm"
+		class="shrink-0 font-mono text-xs tracking-widest text-[#F71111] md:text-sm"
 	>
 		{String(sectionIndex).padStart(2, '0')} — CONTACT
 	</h2>
@@ -25,7 +25,7 @@
 		<div class="flex flex-col gap-4 sm:flex-row">
 			<a
 				href="mailto:anis000romzi@gmail.com"
-				class="inline-flex flex-1 items-center justify-center gap-3 border border-[#CC2A2A] px-5 py-4 font-mono text-xs tracking-widest text-[#CC2A2A] transition-colors hover:bg-[#CC2A2A] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#CC2A2A]"
+				class="inline-flex flex-1 items-center justify-center gap-3 border border-[#F71111] px-5 py-4 font-mono text-xs tracking-widest text-[#F71111] transition-colors hover:bg-[#F71111] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
 			>
 				<span aria-hidden="true"><Icon icon="mdi:email-outline" width="18" height="18" /></span>
 				EMAIL ME
@@ -34,7 +34,7 @@
 				href={`https://wa.me/${whatsappNumber}`}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex flex-1 items-center justify-center gap-3 border border-[#737373]/40 px-5 py-4 font-mono text-xs tracking-widest text-[#EEEEEE] transition-colors hover:border-[#CC2A2A] hover:text-[#CC2A2A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#CC2A2A]"
+				class="inline-flex flex-1 items-center justify-center gap-3 border border-[#929292]/40 px-5 py-4 font-mono text-xs tracking-widest text-[#EEEEEE] transition-colors hover:border-[#F71111] hover:text-[#F71111] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
 			>
 				<span aria-hidden="true"><Icon icon="mdi:whatsapp" width="18" height="18" /></span>
 				WHATSAPP

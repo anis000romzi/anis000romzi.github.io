@@ -112,17 +112,17 @@
 <section
 	id="projects"
 	aria-labelledby="projects-heading"
-	class="section-x section-y flex flex-col gap-16 border-b border-[#737373]/40 md:gap-20"
+	class="section-x section-y flex flex-col gap-16 border-b border-[#929292]/40 md:gap-20"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
 		<h2
 			id="projects-heading"
-			class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm"
+			class="shrink-0 font-mono text-xs tracking-widest text-[#F71111] md:text-sm"
 		>
 			{String(sectionIndex).padStart(2, '0')} — PROJECTS
 		</h2>
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">
-			<p class="text-lg text-[#737373]">
+			<p class="text-lg text-[#929292]">
 				A selection of professional, academic, and personal projects.
 			</p>
 		</div>
@@ -130,25 +130,25 @@
 
 	<div class="mb-10 w-full">
 		{#each projects as project (project.slug)}
-			<div class="border-t border-[#737373]/40 last:border-b">
+			<div class="border-t border-[#929292]/40 last:border-b">
 				<Reveal>
 					<article
 						aria-labelledby={`project-${project.slug}`}
-						class="group grid gap-5 p-5 transition-colors duration-200 hover:bg-[#CC2A2A]/5 sm:p-7 md:grid-cols-[2rem_minmax(0,1fr)] md:gap-8 lg:gap-12"
+						class="group grid gap-5 p-5 transition-colors duration-200 hover:bg-[#F71111]/5 sm:p-7 md:grid-cols-[2rem_minmax(0,1fr)] md:gap-8 lg:gap-12"
 					>
-						<span aria-hidden="true" class="font-mono text-sm text-[#737373]"></span>
+						<span aria-hidden="true" class="font-mono text-sm text-[#929292]"></span>
 						<div class="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-12">
 							<div class="flex min-w-0 flex-col gap-4">
-								<div class="flex flex-wrap items-center gap-3 font-mono text-xs text-[#737373]">
-									<span class="border border-[#737373]/40 px-3 py-1">{project.type}</span>
+								<div class="flex flex-wrap items-center gap-3 font-mono text-xs text-[#929292]">
+									<span class="border border-[#929292]/40 px-3 py-1">{project.type}</span>
 									<time datetime={String(project.year)}>{project.year}</time>
 									{#if project.featured}
-										<span class="text-[#CC2A2A]">Featured</span>
+										<span class="text-[#F71111]">Featured</span>
 									{/if}
 								</div>
 								<h3
 									id={`project-${project.slug}`}
-									class="text-xl transition-colors duration-200 group-hover:text-[#CC2A2A]"
+									class="text-xl transition-colors duration-200 group-hover:text-[#F71111]"
 								>
 									{project.title}
 								</h3>
@@ -157,12 +157,12 @@
 										{[project.role, project.company].filter(Boolean).join(' · ')}
 									</p>
 								{/if}
-								<p class="text-sm leading-relaxed text-[#737373]">{project.description}</p>
+								<p class="text-sm leading-relaxed text-[#929292]">{project.description}</p>
 								{#if project.contributions?.length}
 									<div class="flex flex-col gap-2">
 										<h4 class="font-mono text-xs text-[#EEEEEE]">Contributions</h4>
 										<ul
-											class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#737373] marker:text-[#CC2A2A]"
+											class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#929292] marker:text-[#F71111]"
 										>
 											{#each project.contributions as contribution, index (index)}
 												<li>{contribution}</li>
@@ -175,7 +175,7 @@
 								<ul aria-label={`${project.title} technologies`} class="flex flex-wrap gap-2">
 									{#each project.skills as skill (skill)}
 										<li
-											class="border border-[#737373]/40 px-3 py-1 font-mono text-xs text-[#737373]"
+											class="border border-[#929292]/40 px-3 py-1 font-mono text-xs text-[#929292]"
 										>
 											{skill}
 										</li>
@@ -191,7 +191,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												aria-label={`Visit ${project.title} website (opens in a new tab)`}
-												class="text-[#CC2A2A] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#CC2A2A]"
+												class="text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
 												>Website <span aria-hidden="true">↗</span></a
 											>
 										{/if}
@@ -203,7 +203,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												aria-label={`View ${project.title} repository (opens in a new tab)`}
-												class="text-[#CC2A2A] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#CC2A2A]"
+												class="text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
 												>Repository <span aria-hidden="true">↗</span></a
 											>
 										{/if}

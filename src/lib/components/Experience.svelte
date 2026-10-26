@@ -50,17 +50,17 @@
 <section
 	id="experience"
 	aria-labelledby="experience-heading"
-	class="section-x section-y flex flex-col gap-16 border-b border-[#737373]/40 md:gap-20"
+	class="section-x section-y flex flex-col gap-16 border-b border-[#929292]/40 md:gap-20"
 >
 	<div class="section-gap flex w-full flex-col justify-center md:flex-row">
 		<h2
 			id="experience-heading"
-			class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm"
+			class="shrink-0 font-mono text-xs tracking-widest text-[#F71111] md:text-sm"
 		>
 			{String(sectionIndex).padStart(2, '0')} — EXPERIENCE
 		</h2>
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">
-			<p class="text-lg text-[#737373]">
+			<p class="text-lg text-[#929292]">
 				My work across insurance, ticketing SaaS, and enterprise systems — building features,
 				maintaining APIs, and improving the software people use every day.
 			</p>
@@ -69,23 +69,23 @@
 
 	<ol class="w-full">
 		{#each experiences as experience (experience.company)}
-			<li class="border-t border-[#737373]/40 last:border-b">
+			<li class="border-t border-[#929292]/40 last:border-b">
 				<Reveal>
 					<article
 						class="grid gap-6 py-8 sm:py-10 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10 lg:gap-16"
 					>
-						<div class="flex flex-col gap-3 font-mono text-xs text-[#737373]">
+						<div class="flex flex-col gap-3 font-mono text-xs text-[#929292]">
 							<p class="text-[#EEEEEE]">{experience.period}</p>
 							<p>{experience.location}</p>
 						</div>
 						<div class="flex min-w-0 flex-col gap-5">
 							<div class="flex flex-col gap-2">
 								<h3 class="text-xl font-medium sm:text-2xl">{experience.role}</h3>
-								<p class="text-[#CC2A2A]">{experience.company}</p>
-								{#if experience.note}<p class="text-sm text-[#737373]">{experience.note}</p>{/if}
+								<p class="text-[#F71111]">{experience.company}</p>
+								{#if experience.note}<p class="text-sm text-[#929292]">{experience.note}</p>{/if}
 							</div>
 							<ul
-								class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-[#737373] marker:text-[#CC2A2A] sm:text-base"
+								class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-[#929292] marker:text-[#F71111] sm:text-base"
 							>
 								{#each experience.highlights as highlight (highlight)}
 									<li>{highlight}</li>
@@ -93,7 +93,7 @@
 							</ul>
 							<ul aria-label="Products worked on" class="flex flex-wrap gap-2">
 								{#each experience.products as product (product)}
-									<li class="border border-[#737373]/40 px-3 py-1 font-mono text-xs text-[#737373]">
+									<li class="border border-[#929292]/40 px-3 py-1 font-mono text-xs text-[#929292]">
 										{product}
 									</li>
 								{/each}

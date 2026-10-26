@@ -52,10 +52,10 @@
 
 <div
 	id="about"
-	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#737373]/40 md:flex-row"
+	class="section-x section-y section-gap flex w-full flex-col justify-center border-b border-[#929292]/40 md:flex-row"
 >
 	<div class="flex flex-col">
-		<p class="shrink-0 font-mono text-xs tracking-widest text-[#CC2A2A] md:text-sm">
+		<p class="shrink-0 font-mono text-xs tracking-widest text-[#F71111] md:text-sm">
 			{String(sectionIndex).padStart(2, '0')} — ABOUT
 		</p>
 		<img
@@ -72,7 +72,7 @@
 			considered front-end design.
 		</p>
 		<Reveal delay={150}>
-			<p class="text-base text-[#737373] md:text-lg">
+			<p class="text-base text-[#929292] md:text-lg">
 				Currently at bitcorp, maintaining BBoss and building BRISurf Care for insurance claims and
 				refunds. Previously shipped TixFly, a ticketing SaaS platform, and supported MariPos at Mari
 				Works Solution, and built internal tools at PT Nusantara Infrastructure. I care about clean
@@ -81,7 +81,7 @@
 		</Reveal>
 		<Reveal delay={300}>
 			<div class="flex flex-col gap-5">
-				<p class="font-mono text-sm tracking-widest text-[#CC2A2A]">SKILLS</p>
+				<p class="font-mono text-sm tracking-widest text-[#F71111]">SKILLS</p>
 
 				{#each skills as skill (skill.categories)}
 					<div class="flex flex-col gap-3">
@@ -89,10 +89,10 @@
 							{skill.categories}
 						</p>
 
-						<div class="flex flex-wrap gap-2 font-mono text-xs text-[#737373]">
+						<div class="flex flex-wrap gap-2 font-mono text-xs text-[#929292]">
 							{#each skill.items as item (item.name)}
 								<div
-									class="flex items-center justify-center gap-2 border border-[#737373]/40 p-2 hover:border-[#CC2A2A]/40 hover:text-[#CC2A2A]"
+									class="flex items-center justify-center gap-2 border border-[#929292]/40 p-2 hover:border-[#F71111]/40 hover:text-[#F71111]"
 								>
 									<Icon icon={item.icon} width="13" height="13" />
 									<span>{item.name}</span>
