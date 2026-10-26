@@ -1,13 +1,19 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
-	// import Projects from '$lib/components/Projects.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 	import Writings from '$lib/components/Writings.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Reveal from '$lib/components/Reveal.svelte';
 	import Experience from '$lib/components/Experience.svelte';
 
-	const sections = [aboutSection, experienceSection, writingsSection, contactSection];
+	const sections = [
+		aboutSection,
+		experienceSection,
+		projectSection,
+		writingsSection,
+		contactSection
+	];
 </script>
 
 {#snippet aboutSection(index: number)}
@@ -16,6 +22,10 @@
 
 {#snippet experienceSection(index: number)}
 	<Experience sectionIndex={index} />
+{/snippet}
+
+{#snippet projectSection(index: number)}
+	<Projects sectionIndex={index} />
 {/snippet}
 
 {#snippet writingsSection(index: number)}
