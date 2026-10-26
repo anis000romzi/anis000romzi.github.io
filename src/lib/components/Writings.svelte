@@ -41,7 +41,7 @@
 						aria-pressed={selected === category}
 						onclick={() => toggle(category)}
 						class="cursor-pointer border border-[#929292]/40 p-1 px-3 font-mono text-sm hover:border-[#F71111] hover:text-[#F71111]
-							{selected === category ? 'bg-[#F71111] text-white hover:text-white' : 'text-[#929292]'}"
+							{selected === category ? 'bg-[#F71111] border-[#F71111]/40 text-white hover:text-white' : 'text-[#929292]'}"
 					>
 						{category}
 					</button>

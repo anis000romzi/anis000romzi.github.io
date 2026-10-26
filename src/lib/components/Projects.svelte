@@ -19,6 +19,28 @@
 	};
 
 	const projects: Project[] = [
+		// {
+		// 	slug: 'your-anime-list',
+		// 	title: 'your-anime-list',
+		// 	description:
+		// 		'A hotel reservation and management web application developed as a college final project using PHP, CodeIgniter, JavaScript, and MySQL.',
+		// 	type: 'Academic',
+		// 	repository: 'https://github.com/anis000romzi/your-anime-list',
+		// 	website: '',
+		// 	skills: ['PHP', 'Codeigniter', 'JavaScript', 'MySQL'],
+		// 	year: 2022
+		// },
+		{
+			slug: 'my-restaurant-list',
+			title: 'My Restaurant List',
+			description:
+				'A Restaurant catalouging app for Dicoding\'s Frontend Development course final assignment using plain Javascript, HTML, and CSS.',
+			type: 'Personal',
+			repository: 'https://github.com/anis000romzi/my-restaurant-list',
+			website: 'https://my-restaurant-list.netlify.app/',
+			skills: ['Javascript', 'HTML', 'CSS'],
+			year: 2022
+		},
 		{
 			slug: 'billies-hotel',
 			title: 'Billies Hotel',
@@ -42,8 +64,8 @@
 			slug: 'open-music-api',
 			title: 'Open Music API',
 			description:
-				'A backend API for a music application, developed as an undergraduate thesis using Node.js, Hapi.js, PostgreSQL, Redis, and RabbitMQ.',
-			type: 'Academic',
+				'A backend API for a music application for Dicoding\'s Backend Development course final assignment thesis using Node.js, Hapi.js, PostgreSQL, Redis, and RabbitMQ.',
+			type: 'Personal',
 			repository: 'https://github.com/anis000romzi/open-music-api',
 			skills: ['Node.js', 'JavaScript', 'Hapi.js', 'PostgreSQL', 'Redis', 'RabbitMQ'],
 			year: 2024
