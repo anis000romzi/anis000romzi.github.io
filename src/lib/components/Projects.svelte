@@ -34,11 +34,11 @@
 			slug: 'my-restaurant-list',
 			title: 'My Restaurant List',
 			description:
-				'A Restaurant catalouging app for Dicoding\'s Frontend Development course final assignment using plain Javascript, HTML, and CSS.',
+				'A Restaurant catalouing app for Dicoding\'s Frontend Development course final assignment using plain JavaScript, HTML, and CSS.',
 			type: 'Personal',
 			repository: 'https://github.com/anis000romzi/my-restaurant-list',
 			website: 'https://my-restaurant-list.netlify.app/',
-			skills: ['Javascript', 'HTML', 'CSS'],
+			skills: ['JavaSWcript', 'HTML', 'CSS'],
 			year: 2022
 		},
 		{
@@ -64,11 +64,11 @@
 			slug: 'open-music-api',
 			title: 'Open Music API',
 			description:
-				'A backend API for a music application for Dicoding\'s Backend Development course final assignment thesis using Node.js, Hapi.js, PostgreSQL, Redis, and RabbitMQ.',
+				'A backend API for a music application for Dicoding\'s Backend Development course final assignment using Node.js, Hapi.js, PostgreSQL, Redis, and RabbitMQ.',
 			type: 'Personal',
 			repository: 'https://github.com/anis000romzi/open-music-api',
 			skills: ['Node.js', 'JavaScript', 'Hapi.js', 'PostgreSQL', 'Redis', 'RabbitMQ'],
-			year: 2024
+			year: 2023
 		},
 		{
 			slug: 'tixfly',
@@ -115,7 +115,7 @@
 				'A self-service insurance claims portal that allows insured participants to check their claim status using their participant number.',
 			type: 'Professional',
 			website: 'https://layanan.bsmpialangasuransi.com',
-			skills: ['PHP', 'Laravel', 'JavaScript', 'React.js', 'Tailwind.js'],
+			skills: ['PHP', 'Laravel', 'JavaScript', 'React.js', 'Tailwind CSS'],
 			year: 2026
 		},
 		{
@@ -125,7 +125,7 @@
 				"A corporate website for BSM Pialang Asuransi, presenting the company's profile, insurance brokerage services, and business information.",
 			type: 'Professional',
 			website: 'https://bsmpialangasuransi.com/id',
-			skills: ['Go', 'TypeScript', 'React.js', 'Tailwind.js', 'PostgreSQL'],
+			skills: ['Go', 'TypeScript', 'React.js', 'Tailwind CSS', 'PostgreSQL'],
 			year: 2026
 		}
 	];
