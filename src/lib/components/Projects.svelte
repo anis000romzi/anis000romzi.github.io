@@ -8,28 +8,14 @@
 		title: string;
 		description: string;
 		type: 'Professional' | 'Academic' | 'Personal';
-		role?: string;
-		company?: string;
 		year: number;
 		skills: string[];
-		contributions?: string[];
 		website?: string;
 		repository?: string;
 		featured?: boolean;
 	};
 
 	const projects: Project[] = [
-		// {
-		// 	slug: 'your-anime-list',
-		// 	title: 'your-anime-list',
-		// 	description:
-		// 		'A hotel reservation and management web application developed as a college final project using PHP, CodeIgniter, JavaScript, and MySQL.',
-		// 	type: 'Academic',
-		// 	repository: 'https://github.com/anis000romzi/your-anime-list',
-		// 	website: '',
-		// 	skills: ['PHP', 'Codeigniter', 'JavaScript', 'MySQL'],
-		// 	year: 2022
-		// },
 		{
 			slug: 'my-restaurant-list',
 			title: 'My Restaurant List',
@@ -174,24 +160,7 @@
 								>
 									{project.title}
 								</h3>
-								{#if project.role || project.company}
-									<p class="text-sm text-[#EEEEEE]">
-										{[project.role, project.company].filter(Boolean).join(' · ')}
-									</p>
-								{/if}
 								<p class="text-sm leading-relaxed text-[#929292]">{project.description}</p>
-								{#if project.contributions?.length}
-									<div class="flex flex-col gap-2">
-										<h4 class="font-mono text-xs text-[#EEEEEE]">Contributions</h4>
-										<ul
-											class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#929292] marker:text-[#F71111]"
-										>
-											{#each project.contributions as contribution, index (index)}
-												<li>{contribution}</li>
-											{/each}
-										</ul>
-									</div>
-								{/if}
 							</div>
 							<div class="flex min-w-0 flex-col gap-5">
 								<ul aria-label={`${project.title} technologies`} class="flex flex-wrap gap-2">

@@ -24,7 +24,7 @@
 <main class="section-x section-y min-h-[70vh]">
 	<article class="mx-auto max-w-3xl">
 		<a
-			href={resolve('/#writings')}
+			href={resolve('/writings')}
 			class="inline-flex items-center font-mono text-sm text-[#929292] hover:text-[#F71111]"
 			>← Back to writings</a
 		>
