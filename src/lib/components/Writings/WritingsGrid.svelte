@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import type { Writing } from '$lib/content/writings/writings';
 	import Icon from '@iconify/svelte';
-	import Reveal from './Reveal.svelte';
+	import Reveal from '../Reveal.svelte';
 
 	let { items }: { items: Writing[] } = $props();
 

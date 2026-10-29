@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { projects } from '$lib/content/projects-and-case-studies/catalog';
 	import { resolve } from '$app/paths';
-	import ProjectsList from '$lib/components/ProjectsList.svelte';
+	import ProjectsGrid from '$lib/components/Projects/ProjectsGrid.svelte';
 </script>
 
 <svelte:head>
@@ -25,6 +25,6 @@
 			</p>
 		</header>
 
-		<ProjectsList items={projects} />
+		<ProjectsGrid items={projects} />
 	</div>
 </main>

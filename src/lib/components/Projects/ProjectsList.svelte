@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Reveal from './Reveal.svelte';
+	import Reveal from '../Reveal.svelte';
 
 	import type { Project } from '$lib/content/projects-and-case-studies/catalog';
 
