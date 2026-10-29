@@ -8,7 +8,9 @@ interface InViewOptions {
 }
 
 export const inView: Action<HTMLElement, InViewOptions> = (node, options) => {
-	const { onEnter, threshold = 0.15, rootMargin = '0px 0px -10% 0px', once = true } = options;
+	// Whole sections can be taller than the viewport, especially on mobile.
+	// Reveal on entry so their height cannot prevent the animation from starting.
+	const { onEnter, threshold = 0, rootMargin = '0px 0px -10% 0px', once = true } = options;
 
 	const observer = new IntersectionObserver(
 		([entry]) => {
