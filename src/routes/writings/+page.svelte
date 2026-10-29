@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import WritingsGrid from '$lib/components/WritingsGrid.svelte';
+	import WritingsGrid from '$lib/components/Writings/WritingsGrid.svelte';
 	import { categories, writings, type Category } from '$lib/content/writings/writings';
 
 	let selected = $state<Category | null>(null);
