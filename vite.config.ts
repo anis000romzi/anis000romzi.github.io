@@ -21,6 +21,16 @@ export default defineConfig({
 			adapter: adapter({
 				fallback: '404.html'
 			}),
+			prerender: {
+				handleUnseenRoutes: ({ routes }) => {
+					const unexpected = routes.filter(
+						(route) => route !== '/projects/[slug]' && route !== '/writings/[slug]'
+					);
+					if (unexpected.length > 0) {
+						throw new Error(`Routes were not prerendered: ${unexpected.join(', ')}`);
+					}
+				}
+			}
 		}),
 
 		paraglideVitePlugin({
