@@ -63,7 +63,7 @@
 			{/if}
 		</header>
 		<div
-			class="case-study-body prose max-w-none break-words prose-invert prose-a:text-[#F71111] prose-pre:overflow-x-auto prose-img:h-auto prose-img:max-w-full"
+			class="case-study-body prose max-w-none wrap-break-word prose-invert prose-a:text-[#F71111] prose-pre:overflow-x-auto prose-img:h-auto prose-img:max-w-full"
 		>
 			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 			{@html data.html}

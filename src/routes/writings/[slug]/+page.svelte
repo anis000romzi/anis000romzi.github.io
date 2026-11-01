@@ -39,7 +39,7 @@
 			{#if data.writing.excerpt}<p class="text-lg text-[#929292]">{data.writing.excerpt}</p>{/if}
 		</header>
 		<div
-			class="writing-body prose max-w-none break-words prose-invert prose-a:text-[#F71111] prose-pre:overflow-x-auto prose-img:h-auto prose-img:max-w-full"
+			class="writing-body prose max-w-none wrap-break-word prose-invert prose-a:text-[#F71111] prose-pre:overflow-x-auto prose-img:h-auto prose-img:max-w-full"
 		>
 			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 			{@html data.html}
