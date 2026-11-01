@@ -1,4 +1,5 @@
-import type { Category } from './projects';
+export const categories = ['Personal', 'Academic', 'Professional'] as const;
+export type Category = (typeof categories)[number];
 
 export type Project = {
 	slug: string;

@@ -2,6 +2,8 @@
 	import Reveal from '../Reveal.svelte';
 
 	import type { Project } from '$lib/content/projects-and-case-studies/catalog';
+	import { hasCaseStudy } from '$lib/content/projects-and-case-studies/projects';
+	import { resolve } from '$app/paths';
 
 	let { items }: { items: readonly Project[] } = $props();
 </script>
@@ -40,8 +42,16 @@
 									</li>
 								{/each}
 							</ul>
-							{#if project.website || project.repository}
+							{#if hasCaseStudy(project.slug) || project.website || project.repository}
 								<div class="flex flex-wrap gap-x-5 gap-y-3 font-mono text-sm">
+									{#if hasCaseStudy(project.slug)}
+										<a
+											href={resolve('/projects/[slug]', { slug: project.slug })}
+											aria-label={`Read ${project.title} case study`}
+											class="text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
+											>Read case study <span aria-hidden="true">→</span></a
+										>
+									{/if}
 									{#if project.website}
 										<!-- External project URLs do not use SvelteKit route resolution. -->
 										<!-- eslint-disable svelte/no-navigation-without-resolve -->
