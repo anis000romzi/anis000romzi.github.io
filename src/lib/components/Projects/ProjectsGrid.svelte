@@ -30,16 +30,33 @@
 				</div>
 				<div class="flex flex-wrap justify-between gap-3 font-mono text-sm">
 					<div>{project.year}</div>
-					{#if hasCaseStudy(project.slug)}
-						<a
-							href={resolve('/projects/[slug]', { slug: project.slug })}
-							aria-label={`Read ${project.title} case study`}
-							class="inline-flex items-center gap-2 text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
-						>
-							Read case study
-							<Icon icon="akar-icons:arrow-right" width="13" height="13" />
-						</a>
-					{/if}
+					<div class="flex flex-wrap gap-x-5 gap-y-3">
+						{#if hasCaseStudy(project.slug)}
+							<a
+								href={resolve('/projects/[slug]', { slug: project.slug })}
+								aria-label={`Read ${project.title} case study`}
+								class="inline-flex items-center gap-2 text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
+							>
+								Read case study
+								<Icon icon="akar-icons:arrow-right" width="13" height="13" />
+							</a>
+						{/if}
+						{#each [{ label: 'Website', url: project.website }, { label: 'Repository', url: project.repository }] as link (link.label)}
+							{#if link.url}
+								<!-- External project URLs do not use SvelteKit route resolution. -->
+								<!-- eslint-disable svelte/no-navigation-without-resolve -->
+								<a
+									href={link.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label={`View ${project.title} ${link.label.toLowerCase()} (opens in a new tab)`}
+									class="inline-flex items-center gap-2 text-[#F71111] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F71111]"
+								>
+									{link.label} <span aria-hidden="true">↗</span>
+								</a>
+							{/if}
+						{/each}
+					</div>
 				</div>
 			</div>
 		</Reveal>
