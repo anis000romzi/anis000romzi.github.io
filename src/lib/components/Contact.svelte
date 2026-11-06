@@ -19,7 +19,7 @@
 
 	<div class="flex w-full flex-col gap-10 md:max-w-xl lg:max-w-2xl">
 		<p class="text-lg text-[#EEEEEE] md:text-xl">
-			Have a project in mind? Let's build something together!
+			Have a project, an opportunity, or an idea to share? Just contact me!
 		</p>
 
 		<div class="flex flex-col gap-4 sm:flex-row">

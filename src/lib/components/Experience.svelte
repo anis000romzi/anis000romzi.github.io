@@ -12,11 +12,10 @@
 			location: 'South Jakarta, Indonesia',
 			note: 'Outsourced to PT BRIngin Sejahtera Makmur Pialang Asuransi.',
 			highlights: [
-				'Maintain and enhance BBoss, resolving bugs and improving application stability and performance.',
-				'Designed, developed, and deployed BRISurf Care for insurance claim and refund registration.',
-				'Deliver feature adjustments and application maintenance based on client requests and business needs.'
-			],
-			products: ['BBoss', 'BRISurf Care']
+				'Maintain backend applications, resolve bugs, and improve reliability and performance.',
+				'Designed, built, and deployed a web application to support customer service workflows.',
+				'Work with client requirements to refine features and support day-to-day operations.'
+			]
 		},
 		{
 			company: 'Mari Works Solution',
@@ -25,11 +24,10 @@
 			location: 'South Jakarta, Indonesia',
 			note: 'Internship & Contract',
 			highlights: [
-				'Improved TixFly’s backend API reliability, security, and performance, and resolved admin dashboard bugs.',
-				'Built modules for digital video transactions and event bookings, implemented password recovery, and customized email and ticket workflows.',
-				'Supported MariPos with backend fixes for seat availability, transactions, and promo codes, and maintained APIs for the mobile team.'
-			],
-			products: ['TixFly', 'MariPos']
+				'Improved API reliability, security, and performance, and resolved issues in administrative interfaces.',
+				'Developed transaction workflows, account recovery features, and automated email communications.',
+				'Resolved backend issues across booking and payment workflows, and maintained APIs for mobile applications.'
+			]
 		},
 		{
 			company: 'PT Nusantara Infrastructure',
@@ -38,11 +36,10 @@
 			location: 'South Jakarta, Indonesia',
 			note: '',
 			highlights: [
-				'Developed features for NISA, an internal self-assessment application.',
-				'Refactored the codebase for readability and maintainability, and built a repair flow API aligned with operational procedures.',
-				'Resolved bugs and improved the application’s user experience.'
-			],
-			products: ['NISA']
+				'Developed features for internal tools that support employee workflows.',
+				'Refactored code for readability and maintainability, and built APIs to support operational processes.',
+				'Fixed application bugs and refined interfaces to make everyday tasks easier.'
+			]
 		}
 	];
 </script>
@@ -61,8 +58,8 @@
 		</h2>
 		<div class="flex w-full flex-col gap-7 md:max-w-xl lg:max-w-2xl">
 			<p class="text-lg text-[#929292]">
-				My work across insurance, ticketing SaaS, and enterprise systems — building features,
-				maintaining APIs, and improving the software people use every day.
+				Experience building and maintaining web applications, from developing new features to
+				improving the reliability and usability of existing systems.
 			</p>
 		</div>
 	</div>
@@ -89,13 +86,6 @@
 							>
 								{#each experience.highlights as highlight (highlight)}
 									<li>{highlight}</li>
-								{/each}
-							</ul>
-							<ul aria-label="Products worked on" class="flex flex-wrap gap-2">
-								{#each experience.products as product (product)}
-									<li class="border border-[#929292]/40 px-3 py-1 font-mono text-xs text-[#929292]">
-										{product}
-									</li>
 								{/each}
 							</ul>
 						</div>

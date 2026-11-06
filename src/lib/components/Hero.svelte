@@ -18,8 +18,8 @@
 	<div class="flex flex-col items-center justify-between gap-10 xl:flex-row xl:items-end">
 		<Reveal delay={300} class="xl:w-6/12">
 			<p class="text-base text-[#929292] md:text-lg">
-				Full stack developer with 2 years' experience delivering scalable, user-focused web
-				applications. Currently optimizing backend performance and APIs at bitcorp, Jakarta.
+				Full stack developer building reliable web applications with intuitive interfaces. I turn
+				complex requirements into straightforward, practical solutions.
 			</p>
 		</Reveal>
 

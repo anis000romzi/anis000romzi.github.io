@@ -67,16 +67,14 @@
 
 	<div class="flex w-full flex-col gap-10 md:max-w-xl lg:max-w-2xl">
 		<p class="text-lg text-[#EEEEEE] md:text-2xl">
-			I build software that earns trust through clarity. Two years working across insurance,
-			ticketing SaaS, and enterprise systems — always at the intersection of backend reliability and
-			considered front-end design.
+			I build web applications with a focus on reliability and ease of use. My work spans backend
+			development and frontend interfaces, bringing both together to solve practical problems.
 		</p>
 		<Reveal delay={150}>
 			<p class="text-base text-[#929292] md:text-lg">
-				Currently at bitcorp, maintaining BBoss and building BRISurf Care for insurance claims and
-				refunds. Previously shipped TixFly, a ticketing SaaS platform, and supported MariPos at Mari
-				Works Solution, and built internal tools at PT Nusantara Infrastructure. I care about clean
-				APIs, resolving bugs fast, and features that hold up in production.
+				From designing APIs to refining user interfaces, I enjoy making complex workflows easier to
+				use and maintain. I care about clear code, thoughtful debugging, and building features that
+				people can depend on every day.
 			</p>
 		</Reveal>
 		<Reveal delay={300}>
