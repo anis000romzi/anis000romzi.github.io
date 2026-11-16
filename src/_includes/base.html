@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+  BASE LAYOUT: the outer shell of every page on the site.
+
+  A page uses this file by writing "layout: base.html" in its front matter
+  (the block between the --- lines at the top of the page).
+
+  Eleventy then takes everything in that page below its front matter and
+  puts it where the content tag is in the body below.
+
+  Template syntax used here:
+    double curly braces   = print a value, e.g. the page title
+    curly brace + percent = do something, e.g. "if" or "include"
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- "title" comes from the front matter of the page using this layout -->
+    <title>{% if title %}{{ title }} - {% endif %}Anis Romzi</title>
+
+    <!-- Font Awesome Free 7.3.1 -->
+    <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/vendor/fontawesome/css/solid.min.css" />
+    <link rel="stylesheet" href="/vendor/fontawesome/css/regular.min.css" />
+    <link rel="stylesheet" href="/vendor/fontawesome/css/brands.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <!-- TODO: add switching language feature -->
+    <!-- TODO: add switching theme feature -->
+
+    <!--
+      Show a header with the nav on every page EXCEPT the home page
+      (the home page already has the nav in its aside).
+      "page.url" is provided by Eleventy: the address of the current page.
+    -->
+    {% if page.url != "/" %}
+    <header>
+      <a href="/">← Home</a>
+      {% include "nav.html" %}
+    </header>
+    {% endif %}
+
+    <main>
+      <!-- The page's own content goes here. "safe" = insert it as HTML, not text -->
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <span>Thanks for coming by ^^</span>
+      <span>Copyright © 2026 Anis Romzi</span>
+    </footer>
+  </body>
+</html>

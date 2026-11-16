@@ -1,0 +1,30 @@
+---
+layout: base.html
+title: Blogs
+---
+<!--
+  BLOG LIST
+
+  "collections.posts" is a list Eleventy makes for you: every file whose
+  front matter has "tags: posts" goes into it, sorted oldest first.
+  It is basically this JavaScript array:
+
+    [
+      { url: "/blog/hello-world/", date: ..., data: { title: "Hello World", ... } },
+      { url: "/blog/another-post/", date: ..., data: { title: "Another Post", ... } }
+    ]
+
+  The "for" below works like:  for (const post of collections.posts.reverse())
+  "post" is just the loop variable name (you could call it anything).
+  "reverse" flips the list so the newest post is first.
+-->
+<h1>Blogs</h1>
+
+<ul>
+  {% for post in collections.posts | reverse %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    ({{ post.date | readableDate }})
+  </li>
+  {% endfor %}
+</ul>

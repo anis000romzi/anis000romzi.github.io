@@ -1,0 +1,19 @@
+---
+# This layout itself sits inside base.html, so a post ends up as:
+#   your markdown -> wrapped by this file -> wrapped by base.html
+layout: base.html
+---
+<!--
+  POST LAYOUT: used by every blog post (each post says "layout: post.html").
+  "title" and "page.date" come from the post's front matter.
+  "readableDate" is a small function defined in eleventy.config.js.
+-->
+<article>
+  <h1>{{ title }}</h1>
+  <p>{{ page.date | readableDate }}</p>
+
+  <!-- The post's Markdown, already converted to HTML, goes here -->
+  {{ content | safe }}
+</article>
+
+<p><a href="/blogs/">← All blogs</a></p>

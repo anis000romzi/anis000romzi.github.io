@@ -1,0 +1,24 @@
+{
+  "name": "my-portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anis000romzi/my-portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/anis000romzi/my-portofolio/issues"
+  },
+  "homepage": "https://github.com/anis000romzi/my-portofolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
