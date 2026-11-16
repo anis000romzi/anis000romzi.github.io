@@ -1,3 +1,11 @@
+a {
+  color: black;
+}
+
+a:hover {
+  color: rgb(146, 80, 0)
+}
+
 body {
   font-family: 'EB Garamond', serif;
   font-optical-sizing: auto;
@@ -19,6 +27,7 @@ main {
 
 header {
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   padding: 15px;
   background-color: antiquewhite;
@@ -29,11 +38,38 @@ header .navbar {
   gap: 2rem;
 }
 
+aside .navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* HOME PAGE */
 main:has(> .hero) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 0;
+}
+
+/* fill main so the cow can be pushed to the very bottom */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* auto margins above both blocks: content stays centered in the
+   leftover space, and the cow sits flush on the footer */
+.hero > .intro-layout,
+.the-great-mystical-wise-cow {
+  margin-top: auto;
+}
+
+.the-great-mystical-wise-cow {
+  align-self: flex-end;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .intro-layout {
@@ -51,21 +87,36 @@ main:has(> .hero) {
 }
 
 .resume-download {
-  font: bold 11px;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
   text-decoration: none;
-  background-color: #eeeeee;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #cccccc;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #cccccc;
+  color: black;
+  background-color: antiquewhite;
+  padding: 4px 12px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0 black;
+}
+
+.resume-download:hover {
+  background-color: rgb(240, 225, 200);
+}
+
+.resume-download:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 black;
+}
+
+.resume-download:focus-visible {
+  outline: 2px dashed black;
+  outline-offset: 3px;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 10px;
   margin-top: 70px;
 }
 /* HOME PAGE */
@@ -80,6 +131,20 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header .navbar {
+    flex-wrap: wrap;
+    gap: 8px 1.25rem;
+  }
+
   .intro-layout {
     flex-direction: column;
   }
