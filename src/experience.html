@@ -2,6 +2,291 @@
 layout: base.html
 title: Experience
 ---
-<h1>Experience</h1>
 
-<!-- TODO: add content -->
+<div class="experience">
+  <h1>Experience</h1>
+
+  <div class="experience-body">
+    <section aria-labelledby="work-heading">
+      <h2 id="work-heading">Work Experience</h2>
+
+      <article class="job">
+        <h3>
+          Backend Developer ·
+          <a href="https://bsmpialangasuransi.com/id" target="_blank"
+            >PT. BSM Pialang Asuransi</a
+          >
+        </h3>
+        <p class="job-dates">
+          <time datetime="2026-01">January 2026</time> - Present
+        </p>
+
+        <p>
+          PT. BSM Pialang Asuransi is an insurance broker, and I work on the
+          backend of the web apps that its staff and clients use to manage
+          policies, file claims and refunds, and handle internal operations. My
+          day-to-day is building and maintaining APIs mostly using PHP with the
+          CodeIgniter framework, and I work closely with the business teams like
+          insurance placement and claims to make sure the apps meet their needs.
+        </p>
+
+        <p>
+          The work I'm proudest of so far is on
+          <a href="/projects/">Portal Klaim</a>, where the insured can track the
+          progress and status of their insurance claims. The tricky part was
+          getting the claims data across multiple databases and services, and
+          making sure the data is accurate and up-to-date. I created endpoints
+          for each service to look up claim status and progress, and then
+          normalized the responses so the frontend could easily display them.
+          The result is a single page where the insured can see all their claims
+          and their status, and the business team can see the same data in their
+          internal dashboard.
+        </p>
+
+        <h4>Other things I've worked on</h4>
+        <ul>
+          <li>
+            <a href="/projects/"
+              >BBoss (BSM Business Operation System and Solution)</a
+            >: An internal app for BSM staff to manage policies, claims, and
+            other operations
+          </li>
+          <li>
+            <a href="/projects/">Company profile website</a>: A landing page for
+            PT. BSM Pialang Asuransi
+          </li>
+          <li>
+            <a href="/projects/">Employee Apps Portal</a>: A portal for BSM
+            staff to access their internal apps and tools
+          </li>
+        </ul>
+
+        <h4>Tech stack used</h4>
+        <ul class="tags">
+          <li>PHP</li>
+          <li>CodeIgniter</li>
+          <li>Laravel</li>
+          <li>Go</li>
+          <li>PostgreSQL</li>
+          <li>SQLite</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>
+          Full Stack Developer ·
+          <a href="https://mariworks.id/" target="_blank"
+            >PT. Mari Works Solution</a
+          >
+        </h3>
+        <p class="job-dates">
+          <time datetime="2024-09">September 2024</time> -
+          <time datetime="2026-01">January 2026</time>
+        </p>
+
+        <p>
+          Mari Works is a software development company that builds web apps for
+          clients and businesses. As a full stack developer there, I actually
+          spent most of my time on the backend side of things.
+        </p>
+
+        <p>
+          My main project was <a href="/projects/">TixFly</a>, a
+          software-as-a-service (SaaS) app for ticketing and event management. I
+          worked mostly on the booking and payment side, which handled up to
+          thousands of requests a day. The hard part was "ticket wars": when a
+          popular event opens sales, lots of people try to buy at the same
+          moment, and without care two of them could both end up buying the last
+          ticket. I used RabbitMQ to queue those purchases so they're processed
+          in order, and also to let the app's services talk to each other. I
+          added Redis caching to keep frequently read data fast. None of this
+          was rocket science, just well-known patterns, but it was my first time
+          applying them to a real system with real traffic, and it taught me a
+          lot about concurrency. I also worked on the admin dashboard, where
+          event organizers can see reports on ticket sales, revenue, and
+          attendance.
+        </p>
+
+        <h4>Tech stack used</h4>
+        <ul class="tags">
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>NestJS</li>
+          <li>Vue.js</li>
+          <li>PostgreSQL</li>
+          <li>Redis</li>
+          <li>RabbitMQ</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>
+          Full Stack Developer Intern ·
+          <a href="https://www.nusantarainfrastructure.com/home" target="_blank"
+            >PT. Nusantara Infrastructure Tbk</a
+          >
+        </h3>
+        <p class="job-dates">
+          <time datetime="2023-08">August 2023</time> -
+          <time datetime="2023-12">December 2023</time>
+        </p>
+
+        <p>
+          This was my first internship, during my studies at BSI, through MSIB
+          Kampus Merdeka, a government internship program for university
+          students. Nusantara Infrastructure works in infrastructure and energy
+          fields like toll roads, renewable energy, and clean water. I joined
+          the IT team to develop and maintain their internal apps.
+        </p>
+
+        <p>
+          My main project was
+          <a href="/projects/"
+            >NISA (Nusantara Infrastructure Self-Assessment)</a
+          >, an internal web app for Nusantara Infrastructure staff to manage
+          and monitor toll road operations. I worked on the repair and
+          maintenance module, both the web app and the backend APIs for its
+          mobile app. The app replaced a manual process that was done on paper.
+          For example, for toll road repairs, the staff and field engineers used
+          to fill out a paper form and manually ask the lead engineer to approve
+          it. Now they can do it all in the app, and the lead engineer can
+          approve it with a single click. The app also has dashboards and
+          reports for management to see the status of toll road operations, like
+          CCTV monitoring, traffic data, and maintenance reports.
+        </p>
+
+        <p>
+          It was my first time working on a real codebase with a team, and it
+          taught me a lot about how a professional software team works, like
+          code reviews, version control, testing, and deployment.
+        </p>
+
+        <h4>Tech stack used</h4>
+        <ul class="tags">
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>MySQL</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+
+      <dl class="skill-list">
+        <dt>Languages</dt>
+        <dd>JavaScript, TypeScript, HTML/CSS, PHP, Python, Go, SQL</dd>
+
+        <dt>Backend</dt>
+        <dd>Node.js, NestJS, Express.js, Laravel, CodeIgniter, RESTful APIs</dd>
+
+        <dt>Frontend</dt>
+        <dd>React.js, Vue.js, Svelte, responsive design, accessibility</dd>
+
+        <dt>Databases</dt>
+        <dd>MySQL, PostgreSQL, SQLite, MongoDB, Redis</dd>
+
+        <dt>Tools</dt>
+        <dd>Git, Docker, Linux, RabbitMQ, Postman, Swagger</dd>
+
+        <dt>AI tools</dt>
+        <dd>Claude Code, Codex</dd>
+      </dl>
+    </section>
+
+    <section class="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Courses I've finished</h2>
+      <ul>
+        <li>
+          Front-End Web Developer Learning Path,
+          <a href="https://www.dicoding.com/" target="_blank"
+            >Dicoding Indonesia</a
+          >
+          (<time datetime="2022">2022</time>)
+        </li>
+        <li>
+          Front-End Development Libraries,
+          <a href="https://www.freecodecamp.org/" target="_blank"
+            >freeCodeCamp</a
+          >
+          (<time datetime="2023">2023</time>)
+        </li>
+        <li>
+          Back-End Development and APIs,
+          <a href="https://www.freecodecamp.org/" target="_blank"
+            >freeCodeCamp</a
+          >
+          (<time datetime="2023">2023</time>)
+        </li>
+        <li>
+          React Web Developer Learning Path,
+          <a href="https://www.dicoding.com/" target="_blank"
+            >Dicoding Indonesia</a
+          >
+          (<time datetime="2023">2023</time>)
+        </li>
+        <li>
+          Back-End Developer Learning Path,
+          <a href="https://www.dicoding.com/" target="_blank"
+            >Dicoding Indonesia</a
+          >
+          (<time datetime="2023">2023</time>)
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading">Certifications</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.dicoding.com/certificates/07Z6G4Y4MXQR"
+            target="_blank"
+            ><strong>Menjadi Front-End Web Developer Expert</strong> - Dicoding
+            Indonesia (<time datetime="2022">2022</time>)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.freecodecamp.org/certification/anis000romzi/javascript-algorithms-and-data-structures"
+            target="_blank"
+            ><strong>JavaScript Algorithms and Data Structures</strong> -
+            freeCodeCamp (<time datetime="2023">2023</time>)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.freecodecamp.org/certification/anis000romzi/front-end-development-libraries"
+            target="_blank"
+            ><strong>Front-End Development Libraries</strong> - freeCodeCamp
+            (<time datetime="2023">2023</time>)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.freecodecamp.org/certification/anis000romzi/back-end-development-and-apis"
+            target="_blank"
+            ><strong>Back-End Development and APIs</strong> - freeCodeCamp
+            (<time datetime="2023">2023</time>)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.dicoding.com/certificates/MEPJVO97WP3V"
+            target="_blank"
+            ><strong>Menjadi React Web Developer Expert</strong> - Dicoding
+            Indonesia (<time datetime="2023">2023</time>)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.dicoding.com/certificates/QLZ9RJD22P5D"
+            target="_blank"
+            ><strong>Menjadi Back-End Developer Expert</strong> - Dicoding
+            Indonesia (<time datetime="2023">2023</time>)</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
