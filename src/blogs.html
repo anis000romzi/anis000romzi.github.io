@@ -18,13 +18,15 @@ title: Blogs
   "post" is just the loop variable name (you could call it anything).
   "reverse" flips the list so the newest post is first.
 -->
-<h1>Blogs</h1>
-
-<ul>
-  {% for post in collections.posts | reverse %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    (<time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>)
-  </li>
-  {% endfor %}
-</ul>
+<div class="blogs">
+  <h1>Blogs</h1>
+  
+  <ul>
+    {% for post in collections.posts | reverse %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      (<time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>)
+    </li>
+    {% endfor %}
+  </ul>
+</div>

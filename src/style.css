@@ -281,6 +281,17 @@ main:has(> .hero) {
   content: ", ";
 }
 
+/* ASCII diagrams: scroll sideways inside the box instead of
+   stretching the page when a line is too long */
+.diagram {
+  margin: 1em 0;
+}
+
+.diagram pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
 .skill-list {
   display: grid;
   grid-template-columns: max-content 1fr;

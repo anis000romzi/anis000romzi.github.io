@@ -99,12 +99,32 @@ title: Experience
           moment, and without care two of them could both end up buying the last
           ticket. I used RabbitMQ to queue those purchases so they're processed
           in order, and also to let the app's services talk to each other. I
-          added Redis caching to keep frequently read data fast. None of this
-          was rocket science, just well-known patterns, but it was my first time
-          applying them to a real system with real traffic, and it taught me a
-          lot about concurrency. I also worked on the admin dashboard, where
-          event organizers can see reports on ticket sales, revenue, and
-          attendance.
+          added Redis caching to keep frequently read data fast.
+        </p>
+
+        <figure class="diagram">
+          <pre
+            role="img"
+            aria-label="Diagram: buyers A, B, and C all click buy at once. Their purchases go into a queue and are processed one by one, so only buyer A gets the last ticket."
+          >
+buyer A ─┐
+buyer B ─┼─► [ queue ] ─► A, then B, then C ─► last ticket → A only
+buyer C ─┘</pre
+          >
+          <figcaption>
+            <small
+              >Everyone clicks "buy" at once; the queue takes them one by
+              one.</small
+            >
+          </figcaption>
+        </figure>
+
+        <p>
+          None of this was rocket science, just well-known patterns, but it was
+          my first time applying them to a real system with real traffic, and it
+          taught me a lot about concurrency. I also worked on the admin
+          dashboard, where event organizers can see reports on ticket sales,
+          revenue, and attendance.
         </p>
 
         <h4>Tech stack used</h4>
@@ -150,9 +170,40 @@ title: Experience
           For example, for toll road repairs, the staff and field engineers used
           to fill out a paper form and manually ask the lead engineer to approve
           it. Now they can do it all in the app, and the lead engineer can
-          approve it with a single click. The app also has dashboards and
-          reports for management to see the status of toll road operations, like
-          CCTV monitoring, traffic data, and maintenance reports.
+          approve it with a single click.
+        </p>
+
+        <figure class="diagram">
+          <pre
+            role="img"
+            aria-label="Diagram: Before, the repair process was done manually on paper. After, the repair process is done in the app, with a single click for approval."
+          >
+Before:
+👷 "I need to repair this pavement!!"
+ │
+ ├─► write a paper form
+ ├─► ask the lead engineer to approve
+ └─► wait for approval...        What a hassle! 😩
+
+After:
+👷‍♂️ "Oh, there's a hole in the road!!"
+ │
+ ├─► request a repair in the app/web
+ ├─► lead engineer approves in one click
+ └─► repair is ready to go!      So much easier! 😎</pre
+          >
+          <figcaption>
+            <small>
+              The repair process before and after the NISA app. The app
+              replaces a manual process that was done on paper.
+            </small>
+          </figcaption>
+        </figure>
+
+        <p>
+          The app also has dashboards and reports for management to see the
+          status of toll road operations, like CCTV monitoring, traffic data,
+          and maintenance reports.
         </p>
 
         <p>
