@@ -28,6 +28,10 @@ export default function (eleventyConfig) {
     }),
   );
 
+  eleventyConfig.addFilter("isoDate", (date) =>
+    new Date(date).toISOString().slice(0, 10),
+  );
+
   return {
     // Let .html files use template syntax ({{ }} and {% %})
     htmlTemplateEngine: "njk",

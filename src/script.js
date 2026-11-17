@@ -68,4 +68,5 @@ const cow = document.querySelector('.the-great-mystical-wise-cow');
 if (cow) {
   const quote = cowsayQuotes[Math.floor(Math.random() * cowsayQuotes.length)];
   cow.textContent = cowsay(quote);
+  cow.setAttribute('aria-label', `ASCII art of a cow saying: ${quote}`);
 }

@@ -25,7 +25,7 @@ main {
   padding: 20px;
 }
 
-header {
+body > header {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -33,15 +33,26 @@ header {
   background-color: antiquewhite;
 }
 
-header .navbar {
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body > header .navbar ul {
   display: flex;
   gap: 2rem;
 }
 
-aside .navbar {
+.intro-nav .navbar ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.intro-nav h2 {
+  font-size: 1rem;
+  margin: 1em 0;
 }
 
 /* HOME PAGE */
@@ -82,7 +93,7 @@ main:has(> .hero) {
   flex: 1;
 }
 
-.intro-layout aside {
+.intro-layout .intro-nav {
   flex: 0 0 200px;
 }
 
@@ -113,11 +124,18 @@ main:has(> .hero) {
 }
 
 .contact {
+  font-style: normal;
+  margin-top: 70px;
+}
+
+.contact ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  margin-top: 70px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /* HOME PAGE */
 
@@ -130,19 +148,23 @@ main:has(> .hero) {
   padding: 20px;
 }
 
-.about-me > section {
+.about-me > .about-body {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   width: 100%;
 }
 
-.about-me > section > div {
+.about-me > .about-body > div {
   flex: 1;
 }
 
-.about-me > section > div > :first-child {
+.about-me > .about-body > div > :first-child {
   margin-top: 0;
+}
+
+.about-me h2 {
+  font-size: 1.17em;
 }
 
 .about-me aside {
@@ -217,17 +239,21 @@ footer {
   background-color: antiquewhite;
 }
 
+footer p {
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 0;
   }
 
-  header {
+  body > header {
     flex-direction: column;
     gap: 10px;
   }
 
-  header .navbar {
+  body > header .navbar ul {
     flex-wrap: wrap;
     gap: 8px 1.25rem;
   }
@@ -236,11 +262,11 @@ footer {
     flex-direction: column;
   }
 
-  .intro-layout aside {
+  .intro-layout .intro-nav {
     flex-basis: auto;
   }
 
-  .about-me > section {
+  .about-me > .about-body {
     flex-direction: column;
   }
 

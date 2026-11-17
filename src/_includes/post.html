@@ -9,11 +9,13 @@ layout: base.html
   "readableDate" is a small function defined in eleventy.config.js.
 -->
 <article>
-  <h1>{{ title }}</h1>
-  <p>{{ page.date | readableDate }}</p>
+  <header>
+    <h1>{{ title }}</h1>
+    <p><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time></p>
+  </header>
 
   <!-- The post's Markdown, already converted to HTML, goes here -->
   {{ content | safe }}
 </article>
 
-<p><a href="/blogs/">← All blogs</a></p>
+<p><a href="/blogs/"><span aria-hidden="true">←</span> All blogs</a></p>
