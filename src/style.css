@@ -3,7 +3,7 @@ a {
 }
 
 a:hover {
-  color: rgb(146, 80, 0)
+  color: rgb(146, 80, 0);
 }
 
 body {
@@ -278,7 +278,7 @@ main:has(> .hero) {
 }
 
 .tags li:not(:last-child)::after {
-  content: ", ";
+  content: ', ';
 }
 
 /* ASCII diagrams: scroll sideways inside the box instead of
@@ -307,6 +307,76 @@ main:has(> .hero) {
   margin: 0;
 }
 /* EXPERIENCE PAGE */
+
+/* PROJECT PAGE */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects > .project-body {
+  width: 100%;
+}
+
+.projects h2 {
+  font-size: 1.17em;
+  margin: 1.5em 0 0.5em;
+}
+
+.projects section:first-child h2 {
+  margin-top: 0;
+}
+
+.projects h3 {
+  margin: 0;
+}
+
+.project {
+  margin-bottom: 1.25rem;
+}
+
+.project p {
+  margin: 0.25em 0;
+}
+
+.project-meta {
+  font-style: italic;
+}
+
+/* tags on the left, links on the right, on one line */
+.project-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* "Built using:" label and its tags on one line */
+.tech .tags {
+  display: inline;
+}
+
+.project-list {
+  margin: 0;
+  padding-left: 1.25em;
+}
+
+.project-list li {
+  margin-bottom: 0.4em;
+}
+
+.project-list .project-links {
+  white-space: nowrap;
+}
+
+.project-list .project-links::before {
+  content: '— ';
+}
+/* PROJECT PAGE */
 
 footer {
   display: flex;

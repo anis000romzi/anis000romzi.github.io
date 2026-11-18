@@ -7,6 +7,230 @@ title: Projects
   <h1>Projects</h1>
 
   <div class="project-body">
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured</h2>
 
+      <article class="project" id="portal-klaim">
+        <h3>Portal Klaim</h3>
+        <p class="project-meta">
+          PT. BSM Pialang Asuransi · <time datetime="2026">2026</time>
+        </p>
+        <p>
+          A web portal where the insured can track the status and progress of
+          their insurance claims. The claims data is spread across several
+          databases and services, so I built an endpoint for each one and
+          normalized their responses into one format for the frontend. Now the
+          insured and the business team see the same up-to-date claims in one
+          place.
+          <a href="/experience/#bsm">Read more →</a>
+        </p>
+        <div class="project-footer">
+          <div class="tech">
+            Built using:
+            <ul class="tags">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <a href="https://layanan.bsmpialangasuransi.com/" target="_blank"
+            >Live site</a
+          >
+        </div>
+      </article>
+
+      <article class="project" id="tixfly">
+        <h3>TixFly</h3>
+        <p class="project-meta">
+          PT. Mari Works Solution · <time datetime="2024">2024</time>–<time
+            datetime="2026"
+            >2026</time
+          >
+        </p>
+        <p>
+          A SaaS platform for ticketing and event management. I worked on
+          booking and payments, which handle up to thousands of requests a day.
+          To stop two buyers from both getting the last ticket during "ticket
+          wars", I queued purchases with RabbitMQ so they're processed in order,
+          and added Redis caching for frequently read data.
+          <a href="/experience/#mari-works">Read more →</a>
+        </p>
+        <div class="project-footer">
+          <div class="tech">
+            Built using:
+            <ul class="tags">
+              <li>NestJS</li>
+              <li>Vue.js</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+              <li>RabbitMQ</li>
+            </ul>
+          </div>
+          <a href="https://tixfly.id/" target="_blank">Live site</a>
+        </div>
+      </article>
+
+      <article class="project" id="nisa">
+        <h3>NISA (Nusantara Infrastructure Self-Assessment)</h3>
+        <p class="project-meta">
+          PT. Nusantara Infrastructure Tbk · <time datetime="2023">2023</time>
+        </p>
+        <p>
+          An internal web app for Nusantara Infrastructure staff to manage and
+          monitor toll road operations. I built the repair and maintenance
+          module, covering both the web app and the backend APIs for its mobile
+          app. It replaced a paper process: repair requests that used to need a
+          paper form and a manual sign-off are now approved in one click.
+          <a href="/experience/#nusantara-infrastructure">Read more →</a>
+        </p>
+        <div class="project-footer">
+          <div class="tech">
+            Built using:
+            <ul class="tags">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="work-projects-heading">
+      <h2 id="work-projects-heading">Other work projects</h2>
+
+      <ul class="project-list">
+        <li id="bboss">
+          <strong>BBoss (BSM Business Operation System and Solution)</strong>
+          <span class="project-meta">(BSM, 2026)</span>: An internal app for BSM
+          staff to manage policies, claims, and other operations. Built using
+          PHP, CodeIgniter, and PostgreSQL.
+        </li>
+        <li id="employee-apps-portal">
+          <strong>Employee Apps Portal</strong>
+          <span class="project-meta">(BSM, 2026)</span>: A portal for BSM staff
+          to access their internal apps and tools. Built using HTML, CSS, and
+          JavaScript.
+        </li>
+        <li id="bsm-company-profile">
+          <strong>PT BSM Pialang Asuransi Company Profile</strong>
+          <span class="project-meta">(BSM, 2026)</span>: A landing page for PT.
+          BSM Pialang Asuransi. Built using TypeScript, React.js, Tailwind CSS,
+          and Go.
+          <span class="project-links"
+            ><a href="https://bsmpialangasuransi.com/id" target="_blank"
+              >Live</a
+            ></span
+          >
+        </li>
+        <li id="marichat-landing-page">
+          <strong>MariChat Landing Page</strong>
+          <span class="project-meta">(Mari Works, 2025)</span>: A landing page
+          for one of Mari Works Solution's products: MariChat. Built using
+          TypeScript, Nuxt.js, and Tailwind CSS.
+          <span class="project-links"
+            ><a href="https://mari.chat/" target="_blank">Live</a></span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="personal-projects-heading">
+      <h2 id="personal-projects-heading">Personal &amp; learning projects</h2>
+
+      <ul class="project-list">
+        <li id="open-music-api">
+          <strong>Open Music API</strong>
+          <span class="project-meta">(2023)</span>: An API for cataloguing
+          music, where you can upload songs, list them, add them to playlists,
+          and like them. Built using Node.js and PostgreSQL.
+          <span class="project-links"
+            ><a
+              href="https://github.com/anis000romzi/open-music-api"
+              target="_blank"
+              >Source</a
+            ></span
+          >
+        </li>
+        <li id="miting-blog">
+          <strong>miting-blog</strong> <span class="project-meta">(2023)</span>:
+          A simple blogging website where you can write posts, upvote or
+          downvote them, and leave comments. Built using React.js.
+          <span class="project-links"
+            ><a href="https://miting-blog.vercel.app/" target="_blank">Live</a>
+            ·
+            <a
+              href="https://github.com/anis000romzi/miting-blog"
+              target="_blank"
+              >Source</a
+            ></span
+          >
+        </li>
+        <li id="billies-hotel">
+          <strong>Billies Hotel</strong>
+          <span class="project-meta">(2023)</span>: A hotel booking and
+          management website. Built using CodeIgniter.
+          <span class="project-links"
+            ><a
+              href="https://github.com/anis000romzi/billies-hotellll"
+              target="_blank"
+              >Source</a
+            ></span
+          >
+        </li>
+        <li id="vigenesia">
+          <strong>Vigenesia</strong> <span class="project-meta">(2023)</span>: A
+          simple Twitter-like app, made as a project for my university mobile
+          development course. Built using Flutter and CodeIgniter.
+          <span class="project-links"
+            ><a
+              href="https://github.com/anis000romzi/vigenesia-app"
+              target="_blank"
+              >App source</a
+            >
+            ·
+            <a
+              href="https://github.com/anis000romzi/vigenesia-api"
+              target="_blank"
+              >API source</a
+            ></span
+          >
+        </li>
+        <li id="my-restaurant-list">
+          <strong>My Restaurant List</strong>
+          <span class="project-meta">(2022)</span>: A simple PWA for cataloguing
+          restaurants, where you can search by category, add favorites, and
+          leave comments. Built using HTML, CSS, and JavaScript.
+          <span class="project-links"
+            ><a href="https://my-restaurant-list.netlify.app/" target="_blank"
+              >Live</a
+            >
+            ·
+            <a
+              href="https://github.com/anis000romzi/my-restaurant-list"
+              target="_blank"
+              >Source</a
+            ></span
+          >
+        </li>
+        <li id="your-anime-list">
+          <strong>Your Anime List</strong>
+          <span class="project-meta">(2022)</span>: A simple website to search
+          for anime and add them to your favorites. Built using HTML, CSS, and
+          JavaScript.
+          <span class="project-links"
+            ><a href="https://your-animelist.netlify.app/" target="_blank"
+              >Live</a
+            >
+            ·
+            <a
+              href="https://github.com/anis000romzi/your-anime-list"
+              target="_blank"
+              >Source</a
+            ></span
+          >
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
