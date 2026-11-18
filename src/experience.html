@@ -99,7 +99,7 @@ title: Experience
           worked mostly on the booking and payment side, which handled up to
           thousands of requests a day. The hard part was "ticket wars": when a
           popular event opens sales, lots of people try to buy at the same
-          moment, and without care two of them could both end up buying the last
+          moment, and without safeguards two of them could both end up buying the last
           ticket. I used RabbitMQ to queue those purchases so they're processed
           in order, and also to let the app's services talk to each other. I
           added Redis caching to keep frequently read data fast.
@@ -164,7 +164,7 @@ buyer C ─┘</pre
         </p>
 
         <p>
-          This was my first internship, during my studies at BSI, through MSIB
+          This was my first internship, during my studies at Bina Sarana Informatika (BSI), through MSIB
           Kampus Merdeka, a government internship program for university
           students. Nusantara Infrastructure works in infrastructure and energy
           fields like toll roads, renewable energy, and clean water. I joined
