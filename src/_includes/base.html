@@ -20,6 +20,21 @@
     <!-- "title" comes from the front matter of the page using this layout -->
     <title>{% if title %}{{ title }} - {% endif %}Anis Romzi</title>
 
+    {% set siteUrl = "https://anis000romzi.github.io" %}
+    {% set pageTitle %}{% if title %}{{ title }} - {% endif %}Anis Romzi{% endset %}
+    {% set pageDescription = description or "Anis Romzi, a backend-focused full-stack developer based in Jakarta, Indonesia." %}
+    <meta name="description" content="{{ pageDescription }}" />
+    <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anis Romzi" />
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta property="og:description" content="{{ pageDescription }}" />
+    <meta property="og:url" content="{{ siteUrl }}{{ page.url }}" />
+    <meta property="og:image" content="{{ siteUrl }}/resources/1704453141121.jpeg" />
+    <meta property="og:image:alt" content="Photo of Anis Romzi" />
+    <meta name="twitter:card" content="summary" />
+
     <!-- Font Awesome Free 7.3.1 -->
     <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css" />
     <link rel="stylesheet" href="/vendor/fontawesome/css/solid.min.css" />
