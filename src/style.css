@@ -104,6 +104,8 @@ main:has(> .hero) {
   align-self: flex-end;
   margin-bottom: 0;
   line-height: 1.2;
+  cursor: pointer;
+  user-select: none;
 }
 
 .intro-layout {
@@ -476,9 +478,8 @@ main:has(> .hero) {
 
 .post pre {
   padding: 12px 14px;
-  background-color: rgb(255, 247, 237);
-  border: 1px solid black;
-  box-shadow: 1px 1px 0 black;
+  background-color: black;
+  color: white;
 }
 /* BLOG DETAIL PAGE */
 

@@ -1,20 +1,30 @@
 const cowsayQuotes = [
   'Do not be sorry. Be better.',
-  'War. War never changes.',
   'Fear is the mind-killer.',
-  'The cake is a lie.',
-  'I am the one who knocks.',
+  'Meow ~',
   'Winter is coming.',
   'Not all those who wander are lost.',
   "In the end, we only regret the chances we didn't take.",
   'The only limit to our realization of tomorrow will be our doubts of today.',
 ];
 
-const COW = String.raw`        \   ^__^
+const ALERTED_COW = String.raw`        \   ^__^
          \  (oo)\_______
             (__)\       )\/\
                 ||----w |
                 ||     ||`;
+
+const RELAXED_COW = String.raw`        \   ^__^
+         \  (^^)\_______
+            (__)\       )\
+                ||----w | \
+                ||     ||`;
+
+const SURPRISED_COW = String.raw`        \   ^__^
+         \  (00)\_______
+            (__)\       )———
+                //~~~~w\\ 
+               //       \\`;
 
 // Split text into lines no longer than `width`, breaking on spaces
 // (a single word longer than `width` is cut into pieces)
@@ -42,7 +52,7 @@ function wrapText(text, width) {
 }
 
 // Build the speech bubble the same way the `cowsay` program does
-function cowsay(text, width = 40) {
+function cowsay(text, cowArt, width = 40) {
   const lines = wrapText(text, width);
   const max = Math.max(...lines.map((l) => l.length));
 
@@ -58,7 +68,7 @@ function cowsay(text, width = 40) {
     ' ' + '_'.repeat(max + 2),
     ...body,
     ' ' + '-'.repeat(max + 2),
-    COW,
+    cowArt,
   ].join('\n');
 }
 
@@ -66,7 +76,49 @@ function cowsay(text, width = 40) {
 const cow = document.querySelector('.the-great-mystical-wise-cow');
 
 if (cow) {
-  const quote = cowsayQuotes[Math.floor(Math.random() * cowsayQuotes.length)];
-  cow.textContent = cowsay(quote);
-  cow.setAttribute('aria-label', `ASCII art of a cow saying: ${quote}`);
+  let quote = '';
+  let hovering = false;
+  let surpriseTimer;
+
+  const render = (cowArt) => {
+    cow.textContent = cowsay(quote, cowArt);
+  };
+
+  // Pick a quote different from the current one
+  const newQuote = () => {
+    let next;
+    do {
+      next = cowsayQuotes[Math.floor(Math.random() * cowsayQuotes.length)];
+    } while (next === quote && cowsayQuotes.length > 1);
+    quote = next;
+    cow.setAttribute('aria-label', `ASCII art of a cow saying: ${quote}`);
+  };
+
+  // Idle: relaxed
+  newQuote();
+  render(RELAXED_COW);
+
+  // Hover: alerted
+  cow.addEventListener('mouseenter', () => {
+    hovering = true;
+    clearTimeout(surpriseTimer);
+    render(ALERTED_COW);
+  });
+
+  cow.addEventListener('mouseleave', () => {
+    hovering = false;
+    clearTimeout(surpriseTimer);
+    render(RELAXED_COW);
+  });
+
+  // Click: surprised + new quote, then calm back down after a moment
+  cow.addEventListener('click', () => {
+    newQuote();
+    render(SURPRISED_COW);
+    clearTimeout(surpriseTimer);
+    surpriseTimer = setTimeout(
+      () => render(hovering ? ALERTED_COW : RELAXED_COW),
+      1000
+    );
+  });
 }
