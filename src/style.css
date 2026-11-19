@@ -39,6 +39,7 @@ body {
   margin: 0 auto;
   padding: 0 16px;
   background-color: rgb(255, 247, 237);
+  line-height: 1.55;
 }
 
 main {
