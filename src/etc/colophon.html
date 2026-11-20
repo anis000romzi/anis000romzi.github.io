@@ -1,0 +1,77 @@
+---
+layout: base.html
+title: Colophon
+description: How this site is built
+---
+
+<div class="colophon">
+  <h1>Colophon</h1>
+
+  <p><a href="/etc/">&larr; Etc.</a></p>
+
+  <figure class="colophon-definition">
+    <blockquote cite="https://www.merriam-webster.com/dictionary/colophon">
+      <p>
+        <dfn>colophon</dfn> <small>/käləfən/</small>: an inscription at the end
+        of a book or manuscript, usually with facts about its production.
+      </p>
+    </blockquote>
+    <figcaption>
+      &mdash;
+      <a
+        href="https://www.merriam-webster.com/dictionary/colophon"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Merriam-Webster</a
+      >
+    </figcaption>
+  </figure>
+
+  <p>
+    This page is basically that inscription for this website: what it's built
+    with, how it gets deployed, and why it looks the way it does.
+  </p>
+
+  <div class="colophon-body">
+    <h2>How it's built</h2>
+    <p>
+      I kept it simple: plain HTML, CSS, and JavaScript, with Eleventy (11ty) as
+      the static site generator and Nunjucks for templating. Blog posts are
+      written in Markdown.
+    </p>
+
+    <h2>How it's deployed</h2>
+    <p>
+      Every push to <code>master</code> triggers a GitHub Actions workflow that
+      installs dependencies, builds the site with Eleventy, and publishes the
+      generated <code>_site/</code> folder to GitHub Pages.
+    </p>
+
+    <h2>Design choices</h2>
+    <p>
+      I prefer to keep it simple, with an editorial feel and a warm color
+      palette. I avoid the things that make a site feel bloated: generic design
+      elements, heavy animations, walls of tech logos, and skill percentage
+      bars. I want visitors to find what they're looking for as quickly and
+      easily as possible.
+    </p>
+
+    <h2>Source code</h2>
+    <p>
+      The whole site is open source on
+      <a
+        href="https://github.com/anis000romzi/anis000romzi.github.io"
+        rel="noopener noreferrer"
+        target="_blank"
+        >GitHub</a
+      >. Feel free to look around, and if you find a bug or typo, I'd love to
+      hear about it! Just
+      <a
+        href="https://github.com/anis000romzi/anis000romzi.github.io/issues"
+        rel="noopener noreferrer"
+        target="_blank"
+        >open an issue</a
+      >.
+    </p>
+  </div>
+</div>
