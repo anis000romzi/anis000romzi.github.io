@@ -511,6 +511,34 @@ main:has(> .hero) {
 
 /* ETC PAGE */
 
+/* NOW PAGE */
+.now-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 1em;
+}
+
+.now-media-item {
+  flex: 0 1 220px;
+  margin: 0;
+}
+
+.now-media-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.now-media-item figcaption {
+  margin-top: 6px;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+}
+/* NOW PAGE */
+
 /* COLOPHON PAGE */
 .colophon {
   display: flex;
