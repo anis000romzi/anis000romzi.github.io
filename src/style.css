@@ -28,6 +28,18 @@ pre {
   font-size: 0.85em;
 }
 
+/* left-bordered block, used for the colophon definition and the projects NDA note */
+.callout {
+  margin: 0;
+  padding-left: 1em;
+  border-left: 3px solid currentColor;
+}
+
+main p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 body {
   font-family: 'EB Garamond', serif;
   font-size: 1.125rem;
@@ -93,11 +105,6 @@ main:has(> .hero) {
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-
-.hero p {
-  text-align: justify;
-  hyphens: auto;
 }
 
 /* auto margins above both blocks: content stays centered in the
@@ -182,10 +189,6 @@ main:has(> .hero) {
   width: 100%;
 }
 
-.about-me p {
-  text-align: justify;
-}
-
 .about-me > .about-body > div {
   flex: 1;
 }
@@ -260,10 +263,6 @@ main:has(> .hero) {
 
 .experience > .experience-body {
   width: 100%;
-}
-
-.experience p {
-  text-align: justify;
 }
 
 .experience h2 {
@@ -360,7 +359,6 @@ main:has(> .hero) {
 
 .project p {
   margin: 0.25em 0;
-  text-align: justify;
 }
 
 .project-meta {
@@ -481,8 +479,8 @@ main:has(> .hero) {
   text-align: center;
 }
 
-.post p {
-  text-align: justify;
+.blog-detail-header p {
+  text-align: center;
 }
 
 .post pre {
@@ -520,21 +518,11 @@ main:has(> .hero) {
   font-size: 1.17em;
 }
 
-.colophon-definition {
+.definition {
   margin: 0.5em 0;
 }
 
-.colophon p {
-  text-align: justify;
-}
-
-.colophon-definition blockquote {
-  margin: 0;
-  padding-left: 1em;
-  border-left: 3px solid currentColor;
-}
-
-.colophon-definition figcaption {
+.definition figcaption {
   font-size: 0.875em;
   text-align: right;
 }
@@ -554,6 +542,10 @@ footer p {
 }
 
 @media (max-width: 600px) {
+  main p {
+    text-align: left;
+  }
+
   main:not(:has(> .hero)) {
     padding: 10px;
   }
