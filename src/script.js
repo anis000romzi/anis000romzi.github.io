@@ -2,10 +2,13 @@ const cowsayQuotes = [
   'Do not be sorry. Be better.',
   'Fear is the mind-killer.',
   'Meow ~',
-  'Winter is coming.',
+  'Moooo ...',
   'Not all those who wander are lost.',
   "In the end, we only regret the chances we didn't take.",
   'The only limit to our realization of tomorrow will be our doubts of today.',
+  'Despite everything, it\'s still you.',
+  'What is better - to be born good, or to overcome your evil nature through great effort?',
+  'Life before death. Strength before weakness. Journey before destination.'
 ];
 
 const ALERTED_COW = String.raw`        \   ^__^
@@ -22,7 +25,7 @@ const RELAXED_COW = String.raw`        \   ^__^
 
 const SURPRISED_COW = String.raw`        \   ^__^
          \  (00)\_______
-            (__)\       )———
+            (__)\       )—— —
                 //~~~~w\\ 
                //       \\`;
 
@@ -71,7 +74,6 @@ function cowsay(text, cowArt, width = 40) {
     cowArt,
   ].join('\n');
 }
-
 
 const cow = document.querySelector('.the-great-mystical-wise-cow');
 
