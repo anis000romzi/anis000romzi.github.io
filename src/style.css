@@ -574,6 +574,27 @@ main:has(> .hero) {
 }
 /* COLOPHON PAGE */
 
+/* 404 PAGE */
+main:has(> .not-found) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+.lost-cow {
+  margin: 0;
+  line-height: 1.2;
+}
+/* 404 PAGE */
+
 footer {
   display: flex;
   flex-direction: column;

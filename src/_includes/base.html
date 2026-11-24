@@ -61,10 +61,11 @@
 
     <!--
       Show a header with the nav on every page EXCEPT the home page
-      (the home page already has the nav in its aside).
+      (the home page already has the nav in its aside) and pages that
+      set "hideHeader: true" in their front matter (e.g. 404.html).
       "page.url" is provided by Eleventy: the address of the current page.
     -->
-    {% if page.url != "/" %}
+    {% if page.url != "/" and not hideHeader %}
     <header>
       <a href="/"><span aria-hidden="true">←</span> Home</a>
       {% include "nav.html" %}
@@ -76,9 +77,12 @@
       {{ content | safe }}
     </main>
 
+    <!-- pages can hide the footer with "hideFooter: true" in their front matter -->
+    {% if not hideFooter %}
     <footer>
       <p>Thanks for coming by ^^</p>
       <p><small>Copyright © 2026 Anis Romzi</small></p>
     </footer>
+    {% endif %}
   </body>
 </html>
