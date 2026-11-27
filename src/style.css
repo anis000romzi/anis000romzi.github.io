@@ -562,6 +562,17 @@ footer p {
   margin: 0;
 }
 
+/* site icon next to the copyright text; "pixelated" keeps the pixel art sharp */
+footer .copyright {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+footer .copyright img {
+  image-rendering: pixelated;
+}
+
 @media (max-width: 600px) {
   main p {
     text-align: left;
